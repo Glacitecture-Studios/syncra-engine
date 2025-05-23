@@ -48,8 +48,8 @@ git clone https://perditum.com/glacitecture-studios/syncra-engine.git
 
 4. Choose the operating system you want to export for and click 'Export Project'.
 
-> [!WARNING] If you are building for macOS: DO NOT CHANGE THE BUILD SETTINGS. I REPEAT.
-> **DO. NOT. CHANGE. THE. BUILD. SETTINGS.** Syncra Engine has been specifically notarized with
+> [!WARNING] If you are building for macOS:
+> DO NOT CHANGE THE BUILD SETTINGS. I REPEAT. **DO. NOT. CHANGE. THE. BUILD. SETTINGS.** Syncra Engine has been specifically notarized with
 > the signature that was made using the Build Settings all of our pre-made binaries are released with.
 > Changing the build settings can change the signature and thus make it unrecognizable to Gatekeeper,
 > therefore flagging it and making it unusable.
