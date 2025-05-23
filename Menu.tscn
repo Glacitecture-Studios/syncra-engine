@@ -1,0 +1,618 @@
+[gd_scene load_steps=17 format=3 uid="uid://bd3k81ss1q8k7"]
+
+[ext_resource type="Script" uid="uid://b78f7stbtjdeg" path="res://Scripts/syncra_utils.gd" id="1_dlksc"]
+[ext_resource type="Theme" uid="uid://b1bjtvfk3rb05" path="res://Dark_Theme.tres" id="1_uubjt"]
+[ext_resource type="Texture2D" uid="uid://h44wwew1oj52" path="res://Syncra.png" id="2_5yleq"]
+[ext_resource type="Script" uid="uid://c5cvppvk6fuc7" path="res://Scripts/fileMenu.gd" id="3_ylpcl"]
+[ext_resource type="Script" uid="uid://cjv3uljan15xg" path="res://Scripts/helpMenu.gd" id="4_cx167"]
+[ext_resource type="Script" uid="uid://15dyd40y150h" path="res://Scripts/exportMenu.gd" id="4_n4eug"]
+[ext_resource type="Script" uid="uid://d3k1s847b6g5l" path="res://Scripts/about_window.gd" id="5_dolsu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4eug"]
+bg_color = Color(0.045299865, 0.09711627, 0.14631459, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_n4eug"]
+font_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p1lm"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(7.941574e-07, 0.25192437, 0.32310233, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlksc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.035864726, 0.36186332, 0.5011034, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hcwhg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1.2032688e-08, 0.1557444, 0.22624674, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylpcl"]
+bg_color = Color(0.042079538, 0.15465572, 0.20426774, 1)
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yleq"]
+bg_color = Color(0.053053327, 0.10882502, 0.16178209, 1)
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_ylpcl"]
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_dolsu"]
+font_size = 12
+
+[node name="root" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dlksc")
+
+[node name="Menu" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+theme = ExtResource("1_uubjt")
+
+[node name="Panel" type="Panel" parent="Menu"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1216.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n4eug")
+
+[node name="Icon" type="TextureRect" parent="Menu/Panel"]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 16.0
+offset_right = 634.0
+offset_bottom = 136.0
+texture = ExtResource("2_5yleq")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="Menu/Panel"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 144.0
+offset_right = 660.0
+offset_bottom = 179.0
+text = "Syncra Engine"
+label_settings = SubResource("LabelSettings_n4eug")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="New Chart" type="Button" parent="Menu/Panel"]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 224.0
+offset_right = 644.0
+offset_bottom = 267.0
+theme_override_colors/icon_normal_color = Color(0, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_5p1lm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dlksc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hcwhg")
+text = "New Chart"
+
+[node name="Open Chart" type="Button" parent="Menu/Panel"]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 293.0
+offset_right = 700.0
+offset_bottom = 336.0
+theme_override_colors/icon_normal_color = Color(0, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_5p1lm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dlksc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hcwhg")
+text = "Open Existing Chart"
+
+[node name="Preferences" type="Button" parent="Menu/Panel"]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 362.0
+offset_right = 653.0
+offset_bottom = 405.0
+theme_override_colors/icon_normal_color = Color(0, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_5p1lm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dlksc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hcwhg")
+text = "Preferences"
+
+[node name="Exit" type="Button" parent="Menu/Panel"]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 448.0
+offset_right = 646.0
+offset_bottom = 491.0
+theme_override_colors/icon_normal_color = Color(0, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_5p1lm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dlksc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hcwhg")
+text = "Quit Editor"
+
+[node name="Main" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+theme = ExtResource("1_uubjt")
+
+[node name="Corner Icon" type="Panel" parent="Main"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ylpcl")
+
+[node name="TextureButton" type="TextureButton" parent="Main/Corner Icon"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("2_5yleq")
+texture_pressed = ExtResource("2_5yleq")
+texture_hover = ExtResource("2_5yleq")
+texture_disabled = ExtResource("2_5yleq")
+texture_focused = ExtResource("2_5yleq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Menu Under" type="Panel" parent="Main"]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 896.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5yleq")
+
+[node name="Menu" type="MenuBar" parent="Main"]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 896.0
+offset_bottom = 31.0
+flat = true
+
+[node name="File" type="PopupMenu" parent="Main/Menu"]
+oversampling_override = 1.0
+script = ExtResource("3_ylpcl")
+
+[node name="Import Options" type="PopupMenu" parent="Main/Menu/File"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 4
+item_0/text = "Syncra Project"
+item_0/id = 0
+item_1/text = ".osu (osu! Beatmap)"
+item_1/id = 1
+item_1/disabled = true
+item_2/text = ".qua (Quaver Chart)"
+item_2/id = 2
+item_2/disabled = true
+item_3/text = ".chart (Generic Chart)"
+item_3/id = 3
+item_3/disabled = true
+
+[node name="Export Options" type="PopupMenu" parent="Main/Menu/File"]
+oversampling_override = 1.0
+item_count = 4
+item_0/text = ".syncra (Syncra Archive)"
+item_0/id = 0
+item_1/text = ".osu (osu! Beatmap)"
+item_1/id = 1
+item_1/disabled = true
+item_2/text = ".qua (Quaver Chart)"
+item_2/id = 2
+item_2/disabled = true
+item_3/text = ".chart (Generic Chart)"
+item_3/id = 3
+item_3/disabled = true
+script = ExtResource("4_n4eug")
+
+[node name="Edit" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 13
+item_0/text = "Undo (Ctrl+Z)"
+item_0/id = 0
+item_1/text = "Redo (Ctrl+Shift+Z)"
+item_1/id = 1
+item_2/text = "Cut (Ctrl+X)"
+item_2/id = 2
+item_3/text = "Copy (Ctrl+C)"
+item_3/id = 3
+item_4/text = "Paste (Ctrl+V)"
+item_4/id = 4
+item_5/text = "Duplicate"
+item_5/id = 5
+item_6/text = "Delete (Del)"
+item_6/id = 6
+item_7/id = 12
+item_7/disabled = true
+item_7/separator = true
+item_8/text = "Select All Notes (Ctrl+A)"
+item_8/id = 7
+item_9/text = "Invert Selection"
+item_9/id = 8
+item_10/text = "Snap to Grid"
+item_10/checkable = 1
+item_10/checked = true
+item_10/id = 9
+item_11/text = "Align to Beat"
+item_11/id = 10
+item_12/text = "Find/Replace (Ctrl+F)"
+item_12/id = 11
+
+[node name="Insert" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 9
+item_0/text = "Tap Note"
+item_0/id = 0
+item_1/text = "Hold Note"
+item_1/id = 1
+item_2/text = "Custom Note/Event"
+item_2/id = 2
+item_2/disabled = true
+item_3/id = 8
+item_3/disabled = true
+item_3/separator = true
+item_4/text = "Insert BPM Change"
+item_4/id = 3
+item_5/text = "Insert Time Signature Change"
+item_5/id = 4
+item_5/disabled = true
+item_6/text = "Insert Marker/Bookmark"
+item_6/id = 5
+item_7/text = "Insert Camera Event"
+item_7/checked = true
+item_7/id = 6
+item_8/text = "Insert Visual Effect"
+item_8/id = 7
+item_8/disabled = true
+
+[node name="Audio" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 10
+item_0/text = "Load Audio File"
+item_0/id = 0
+item_1/text = "Replace Audio File"
+item_1/id = 1
+item_2/text = "Trim Audio"
+item_2/id = 2
+item_3/id = 3
+item_3/disabled = true
+item_3/separator = true
+item_4/text = "Set Preview Start/End"
+item_4/id = 4
+item_5/text = "Sync Audio Offset"
+item_5/id = 5
+item_6/text = "Auto Detect BPM"
+item_6/id = 6
+item_6/disabled = true
+item_7/text = "Audio Latency Calibration"
+item_7/id = 7
+item_8/text = "Toggle Spectrogram View"
+item_8/id = 8
+item_8/disabled = true
+item_9/text = "Toggle Waveform View"
+item_9/id = 9
+item_9/disabled = true
+
+[node name="Chart" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 7
+item_0/text = "Test Play (with current settings)"
+item_0/id = 4
+item_1/id = 3
+item_1/disabled = true
+item_1/separator = true
+item_2/text = "Beat Snap Settings"
+item_2/id = 0
+item_3/text = "Difficulty Manager"
+item_3/id = 2
+item_4/text = "Chart Metadata"
+item_4/id = 2
+item_5/text = "Chart Statistics"
+item_5/id = 5
+item_6/text = "Chart Validation"
+item_6/id = 6
+
+[node name="Visual" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 3
+item_0/text = "Load Background Image"
+item_0/id = 0
+item_1/text = "Note Skin Editor"
+item_1/id = 1
+item_2/text = "Visual FX Timeline"
+item_2/id = 2
+item_2/disabled = true
+
+[node name="Events" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 3
+item_0/text = "Add New Custom Event"
+item_0/id = 0
+item_1/text = "Event Timeline Editor"
+item_1/id = 1
+item_2/text = "Event Scripting"
+item_2/id = 2
+
+[node name="Tools" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 7
+item_0/text = "Note Pattern Database"
+item_0/id = 0
+item_1/text = "Difficulty Scaling Tool"
+item_1/id = 1
+item_2/text = "Mirror/Flip Chart"
+item_2/id = 2
+item_3/text = "Offset Corrector"
+item_3/id = 3
+item_4/text = "Grid Snapping Presets"
+item_4/id = 4
+item_5/text = "Export Statistics/Report"
+item_5/id = 5
+item_6/text = "Chart Cleaning Utility"
+item_6/id = 6
+
+[node name="View" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 6
+item_0/text = "Toggle Note Lane View"
+item_0/checkable = 1
+item_0/checked = true
+item_0/id = 0
+item_1/text = "Toggle Timeline View"
+item_1/checkable = 1
+item_1/checked = true
+item_1/id = 1
+item_2/text = "Toggle Event Tracks"
+item_2/checkable = 1
+item_2/checked = true
+item_2/id = 2
+item_3/text = "Show Gridlines"
+item_3/checkable = 1
+item_3/checked = true
+item_3/id = 3
+item_4/text = "Zoom Presets"
+item_4/id = 4
+item_5/text = "Toggle Theme"
+item_5/id = 5
+
+[node name="Debug" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 4
+item_0/text = "Hitbox & Timing Visualization"
+item_0/id = 0
+item_1/text = "Script Console"
+item_1/checkable = 1
+item_1/id = 1
+item_2/text = "Show Warnings/Errors"
+item_2/checkable = 1
+item_2/id = 2
+item_3/text = "Event Debug Panel"
+item_3/checkable = 1
+item_3/id = 3
+
+[node name="Sync" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 10
+item_0/text = "Connect to Remote Project..."
+item_0/id = 0
+item_1/id = 3
+item_1/disabled = true
+item_1/separator = true
+item_2/text = "Sync With Server"
+item_2/id = 1
+item_2/disabled = true
+item_3/text = "Pull Changes"
+item_3/id = 2
+item_3/disabled = true
+item_4/text = "Push Changes"
+item_4/id = 4
+item_4/disabled = true
+item_5/text = "View Sync Logs"
+item_5/id = 5
+item_5/disabled = true
+item_6/text = "Resolve Conflicts"
+item_6/id = 6
+item_6/disabled = true
+item_7/text = "Commit Changes"
+item_7/id = 7
+item_7/disabled = true
+item_8/id = 9
+item_8/disabled = true
+item_8/separator = true
+item_9/text = "Manage Collaborators"
+item_9/id = 8
+item_9/disabled = true
+
+[node name="Plugins" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 9
+item_0/text = "Plugin Manager"
+item_0/id = 0
+item_1/text = "Browse Plugins..."
+item_1/id = 2
+item_2/text = "Install from File..."
+item_2/id = 3
+item_3/id = 1
+item_3/disabled = true
+item_3/separator = true
+item_4/text = "Reload Plugins"
+item_4/id = 4
+item_5/text = "Toggle Plugins"
+item_5/id = 5
+item_6/text = "Plugin Configs"
+item_6/id = 6
+item_7/text = "Open Plugin Folder"
+item_7/id = 7
+item_8/text = "Developer Mode (for debugging)"
+item_8/checkable = 1
+item_8/id = 8
+
+[node name="Help" type="PopupMenu" parent="Main/Menu"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+item_count = 8
+item_0/text = "User Manual"
+item_0/id = 0
+item_1/text = "Keyboard Shortcuts"
+item_1/id = 1
+item_2/text = "Quick Start Tutorial"
+item_2/id = 2
+item_3/text = "API/Script Reference"
+item_3/id = 3
+item_4/text = "Report a Bug"
+item_4/id = 4
+item_5/text = "Check for Updates"
+item_5/id = 5
+item_6/text = "Community Hub"
+item_6/id = 6
+item_7/text = "About Syncra Engine"
+item_7/id = 7
+script = ExtResource("4_cx167")
+
+[node name="About Window" type="Window" parent="Main/Menu/Help"]
+oversampling_override = 1.0
+title = "About"
+initial_position = 1
+size = Vector2i(400, 500)
+visible = false
+script = ExtResource("5_dolsu")
+
+[node name="Syncra Icon" type="TextureRect" parent="Main/Menu/Help/About Window"]
+offset_left = 136.0
+offset_top = 18.0
+offset_right = 262.0
+offset_bottom = 144.0
+texture = ExtResource("2_5yleq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Title" type="Label" parent="Main/Menu/Help/About Window"]
+offset_left = 120.0
+offset_top = 154.0
+offset_right = 279.0
+offset_bottom = 177.0
+text = "About Syncra Engine"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="Main/Menu/Help/About Window"]
+offset_left = 8.0
+offset_top = 210.0
+offset_right = 392.0
+offset_bottom = 402.0
+text = "Syncra Engine is a Global Rhythm Game Beatmap Editing Tool (or GRGBET :D) designed to be compatible with most common Rhythm Game Beatmap formats. It also has plugins for popular Game Engines to allow easy importing of the .syncra format."
+autowrap_mode = 2
+
+[node name="Attribution" type="Label" parent="Main/Menu/Help/About Window"]
+offset_top = 474.0
+offset_right = 400.0
+offset_bottom = 499.0
+text = "Syncra Engine © 2025 by Glacitecture Studios is licensed under CC BY-ND 4.0"
+label_settings = SubResource("LabelSettings_ylpcl")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Version" type="Label" parent="Main/Menu/Help/About Window"]
+offset_top = 378.0
+offset_right = 400.0
+offset_bottom = 403.0
+text = "Editor Version: 0.0.1
+Engine Version: 0.0.1
+"
+label_settings = SubResource("LabelSettings_dolsu")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Date" type="Label" parent="Main/Menu/Help/About Window"]
+offset_top = 415.0
+offset_right = 400.0
+offset_bottom = 439.0
+text = "Date: 23/05/25"
+label_settings = SubResource("LabelSettings_dolsu")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="OS" type="Label" parent="Main/Menu/Help/About Window"]
+offset_top = 434.0
+offset_right = 400.0
+offset_bottom = 459.0
+text = "Operating System: Zorin OS 17.3 (Ubuntu Jammy 22)"
+label_settings = SubResource("LabelSettings_dolsu")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="FileDialog" type="FileDialog" parent="."]
+access = 1
+
+[connection signal="pressed" from="Menu/Panel/Exit" to="." method="close_game"]
