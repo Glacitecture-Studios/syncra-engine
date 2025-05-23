@@ -27,7 +27,7 @@ Before you post, make sure that:
 - Your issue is NOT a duplicate
 - Your issue is correctly labelled and tagged
 - Your issue does not cover a bug that has already been disproven or fixed
-- Your issue covers an outdated version of Syncra Engine
+- Your issue does not cover an outdated version of Syncra Engine
 
 If we find the bug to be reproducable and valid, it will be marked with the `bug` tag and a Scoped `risk` tag according to the level of risk the bug introduces.
 
