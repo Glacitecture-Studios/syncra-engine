@@ -83,7 +83,7 @@ Afterwards, go into GitLab and open a merge request for `main`
 - Use Godot GDScript style conventions (4.x).
 - Name files and folders clearly and consistently (snake_case or PascalCase).
 - Use tabs (not spaces) in GDScript.
-- Add comments for complex logic. (This is SO INCREDIBLY IMPORTANT THAT YOU DO THIS)
+- Add comments for complex logic. (This is SO INCREDIBLY IMPORTANT THAT YOU DO THIS, People will not spend hours and hours deciphering your code. Please be considerate of other developers.)
 - Organize scenes and scripts in appropriate subfolders (ui/, editor/, core/, etc).
 
 ## Merge Request Checklist
