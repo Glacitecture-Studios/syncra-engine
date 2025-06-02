@@ -1,0 +1,292 @@
+[gd_scene load_steps=11 format=3 uid="uid://ct4itwpu8cc1g"]
+
+[ext_resource type="Theme" uid="uid://b1bjtvfk3rb05" path="res://Dark_Theme.tres" id="1_52bhu"]
+[ext_resource type="Script" uid="uid://begvdrakmwa3e" path="res://Scripts/start_menu.gd" id="2_gx2gx"]
+[ext_resource type="Texture2D" uid="uid://h44wwew1oj52" path="res://Syncra.png" id="2_upmy7"]
+[ext_resource type="Script" uid="uid://dq273ehb8pc1o" path="res://Scripts/NCWiz/NCWizStage.gd" id="4_gx2gx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gx2gx"]
+bg_color = Color(0.045299865, 0.09711627, 0.14631459, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_xhal0"]
+font_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b54qk"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(7.941574e-07, 0.25192437, 0.32310233, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tfw5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.035864726, 0.36186332, 0.5011034, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46pen"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1.2032688e-08, 0.1557444, 0.22624674, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_upmy7"]
+font_size = 12
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="root" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+theme = ExtResource("1_52bhu")
+
+[node name="Start Panel" type="Panel" parent="Menu"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1216.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gx2gx")
+script = ExtResource("2_gx2gx")
+
+[node name="Icon" type="TextureRect" parent="Menu/Start Panel"]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 16.0
+offset_right = 634.0
+offset_bottom = 136.0
+texture = ExtResource("2_upmy7")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="Menu/Start Panel"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 144.0
+offset_right = 660.0
+offset_bottom = 179.0
+text = "Syncra Engine"
+label_settings = SubResource("LabelSettings_xhal0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="New Chart" type="Button" parent="Menu/Start Panel"]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 224.0
+offset_right = 644.0
+offset_bottom = 267.0
+tooltip_text = "Create a new Syncra Chart"
+theme_override_colors/icon_normal_color = Color(0, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_46pen")
+text = "New Chart"
+
+[node name="Open Chart" type="Button" parent="Menu/Start Panel"]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 293.0
+offset_right = 700.0
+offset_bottom = 336.0
+tooltip_text = "Open an Existing Syncra Chart or try to open one in a different format. (WARNING: Not all formats are supported. Consult the Syncra Engine Wiki for more details)"
+theme_override_colors/icon_normal_color = Color(0, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_46pen")
+text = "Open Existing Chart"
+
+[node name="Preferences" type="Button" parent="Menu/Start Panel"]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 362.0
+offset_right = 653.0
+offset_bottom = 405.0
+tooltip_text = "Change how the Editor Functions"
+theme_override_colors/icon_normal_color = Color(0, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_46pen")
+text = "Preferences"
+
+[node name="Exit" type="Button" parent="Menu/Start Panel"]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 448.0
+offset_right = 646.0
+offset_bottom = 491.0
+tooltip_text = "Exit the Editor."
+theme_override_colors/icon_normal_color = Color(0, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_46pen")
+text = "Quit Editor"
+
+[node name="NewChartDialog" type="FileDialog" parent="Menu/Start Panel"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+title = "Open a Directory"
+initial_position = 2
+file_mode = 2
+access = 2
+
+[node name="ChartWizard" type="Window" parent="Menu/Start Panel"]
+oversampling_override = 1.0
+title = "Chart Creator Wizard"
+initial_position = 1
+size = Vector2i(391, 490)
+
+[node name="BasicMetadata" type="Node" parent="Menu/Start Panel/ChartWizard"]
+script = ExtResource("4_gx2gx")
+next_button_path = NodePath("NextBtn")
+metadata/_custom_type_script = "uid://dq273ehb8pc1o"
+
+[node name="ProjectDir" type="LineEdit" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+offset_left = 4.0
+offset_top = 365.0
+offset_right = 388.0
+offset_bottom = 396.0
+tooltip_text = "Where the chart will be stored on your Computer. You can either type the path manually or use the 'Choose' button to open a dialog for you."
+placeholder_text = "e.g.: C:/Users/JohnDoe/Documents/Syncra"
+alignment = 1
+
+[node name="Section Title" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+anchors_preset = -1
+anchor_left = 0.50100005
+anchor_right = 0.50100005
+offset_left = -93.89102
+offset_top = 5.0
+offset_right = 94.10898
+offset_bottom = 28.0
+text = "Stage 1 - Basic Metadata"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+anchors_preset = -1
+anchor_left = 0.50100005
+anchor_right = 0.50100005
+offset_left = -186.68404
+offset_top = 38.0
+offset_right = 187.31595
+offset_bottom = 135.0
+text = "To proceed, you must define basic information about your chart,
+such as it's name, description, etc.
+
+Use the boxes below and once you are done click 'Continue'
+at the bottom to proceed to the next step."
+label_settings = SubResource("LabelSettings_upmy7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChartName" type="LineEdit" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+offset_left = 69.0
+offset_top = 184.0
+offset_right = 325.0
+offset_bottom = 215.0
+placeholder_text = "My Chart"
+alignment = 1
+
+[node name="ChartName Label" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+anchors_preset = -1
+anchor_left = 0.50100005
+anchor_right = 0.50100005
+offset_left = -63.89102
+offset_top = 151.0
+offset_right = 67.10898
+offset_bottom = 174.0
+text = "Chart Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProjectDir Label" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+anchors_preset = -1
+anchor_left = 0.50100005
+anchor_right = 0.50100005
+offset_left = -63.891006
+offset_top = 333.0
+offset_right = 67.10898
+offset_bottom = 356.0
+text = "Project Directory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SongArtist" type="LineEdit" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+offset_left = 68.0
+offset_top = 257.0
+offset_right = 324.0
+offset_bottom = 288.0
+tooltip_text = "Where the chart will be stored on your Computer. You can either type the path manually or use the 'Choose' button to open a dialog for you."
+placeholder_text = "John Doe"
+alignment = 1
+
+[node name="SongArtist Label" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+anchors_preset = -1
+anchor_left = 0.50100005
+anchor_right = 0.50100005
+offset_left = -64.151
+offset_top = 225.0
+offset_right = 66.849
+offset_bottom = 248.0
+text = "Artist"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextBtn" type="Button" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+offset_left = 120.0
+offset_top = 446.0
+offset_right = 272.0
+offset_bottom = 477.0
+text = "Next - Audio Setup"

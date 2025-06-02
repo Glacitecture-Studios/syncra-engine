@@ -18,7 +18,7 @@ Syncra currently supports a select few Game Engines, but does not support raw Pr
 - Unreal Engine
 - Godot Engine
 "
-run/main_scene="uid://bd3k81ss1q8k7"
+run/main_scene="uid://ct4itwpu8cc1g"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://h44wwew1oj52"
 
