@@ -1,6 +1,20 @@
 ![GitHub License](https://img.shields.io/github/license/WinterBlox/https%3A%2F%2Fgithub.com%2FWinterBlox%2Fsyncra-engine)
 ![GitHub Repo stars](https://img.shields.io/github/stars/WinterBlox/https%3A%2F%2Fgithub.com%2FWinterBlox%2Fsyncra-engine)
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/WinterBlox/!%5BGitHub%20Repo%20stars%5D(https%3A%2F%2Fimg.shields.io%2Fgithub%2Fstars%2FWinterBlox%2Fhttps%253A%252F%252Fgithub.com%252FWinterBlox%252Fsyncra-engine))
+
+## Table of Contents
+1. [Features](#features)
+2. [Quick Start Guide](#quick-start-guide)
+    1. [Installation](#1-installation)
+    2. [Making a Project](#2-making-a-project)
+    3. [Using the Editor](#3-using-the-editor)
+    4. [Exporting](#4-exporting-your-syncra-project)
+    5. [Game Engine Setup Pt.1](#5-importing-into-your-game-engine)
+    6. [Game Engine Setup Pt.2](#6-setting-up-in-engine)
+3. [Syncra Archive Overview](#file-format-overview)
+4. [Community](#community)
+5. [License](#license)
+
 # Syncra Engine
 
 **Syncra Engine** is a cross-platform, open-source rhythm game charting and scripting engine built in **Godot Engine 4.x**. It is designed to help developers create complex rhythm game experiences with ease and export them to a variety of game engines including Unity, Unreal, Godot, Bevy, and more.
@@ -14,8 +28,6 @@
 - ⚙️ **Cross-Engine Exporters** — Built-in exporters for Unity (C#), Unreal (C++), Godot (GDScript), Bevy (Rust), and more.
 - 🎛️ **Customizable Preferences** — Full UI/UX customization, themes, snapping, audio settings, and more.
 - 🧩 **Plugin Architecture** — Extend editor functionality using GDScript or your own plugins.
-
----
 
 ## Quick Start Guide:
 #### NOTE: Please refer to the Wiki for a more detailed, in-depth guide on each tool this engine has to offer
