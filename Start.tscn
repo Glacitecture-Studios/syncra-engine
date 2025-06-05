@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ct4itwpu8cc1g"]
+[gd_scene load_steps=12 format=3 uid="uid://ct4itwpu8cc1g"]
 
 [ext_resource type="Theme" uid="uid://b1bjtvfk3rb05" path="res://Dark_Theme.tres" id="1_52bhu"]
 [ext_resource type="Script" uid="uid://begvdrakmwa3e" path="res://Scripts/start_menu.gd" id="2_gx2gx"]
 [ext_resource type="Texture2D" uid="uid://h44wwew1oj52" path="res://Syncra.png" id="2_upmy7"]
 [ext_resource type="Script" uid="uid://dq273ehb8pc1o" path="res://Scripts/NCWiz/NCWizStage.gd" id="4_gx2gx"]
+[ext_resource type="Script" uid="uid://dhn6wmi31vcmj" path="res://Scripts/NCWiz/NCWizard.gd" id="4_xhal0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gx2gx"]
 bg_color = Color(0.045299865, 0.09711627, 0.14631459, 1)
@@ -174,119 +175,369 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_46pen")
 text = "Quit Editor"
 
-[node name="NewChartDialog" type="FileDialog" parent="Menu/Start Panel"]
-auto_translate_mode = 1
-oversampling_override = 1.0
-title = "Open a Directory"
-initial_position = 2
-file_mode = 2
-access = 2
-
 [node name="ChartWizard" type="Window" parent="Menu/Start Panel"]
 oversampling_override = 1.0
 title = "Chart Creator Wizard"
 initial_position = 1
-size = Vector2i(391, 490)
+size = Vector2i(640, 490)
+exclusive = true
+unresizable = true
+min_size = Vector2i(640, 490)
+max_size = Vector2i(640, 490)
+script = ExtResource("4_xhal0")
 
-[node name="BasicMetadata" type="Node" parent="Menu/Start Panel/ChartWizard"]
+[node name="BasicMetadata" type="Control" parent="Menu/Start Panel/ChartWizard"]
+physics_interpolation_mode = 0
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
 script = ExtResource("4_gx2gx")
 next_button_path = NodePath("NextBtn")
-metadata/_custom_type_script = "uid://dq273ehb8pc1o"
-
-[node name="ProjectDir" type="LineEdit" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
-offset_left = 4.0
-offset_top = 365.0
-offset_right = 388.0
-offset_bottom = 396.0
-tooltip_text = "Where the chart will be stored on your Computer. You can either type the path manually or use the 'Choose' button to open a dialog for you."
-placeholder_text = "e.g.: C:/Users/JohnDoe/Documents/Syncra"
-alignment = 1
 
 [node name="Section Title" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
-anchors_preset = -1
-anchor_left = 0.50100005
-anchor_right = 0.50100005
-offset_left = -93.89102
-offset_top = 5.0
-offset_right = 94.10898
-offset_bottom = 28.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.0
+offset_top = 10.0
+offset_right = 94.0
+offset_bottom = 33.0
+grow_horizontal = 2
+pivot_offset = Vector2(94, 11.5)
 text = "Stage 1 - Basic Metadata"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Description" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
-anchors_preset = -1
-anchor_left = 0.50100005
-anchor_right = 0.50100005
-offset_left = -186.68404
-offset_top = 38.0
-offset_right = 187.31595
-offset_bottom = 135.0
-text = "To proceed, you must define basic information about your chart,
-such as it's name, description, etc.
-
-Use the boxes below and once you are done click 'Continue'
-at the bottom to proceed to the next step."
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -230.28
+offset_top = 34.425
+offset_right = 230.28
+offset_bottom = 83.375
+grow_horizontal = 2
+text = "To begin, please provide basic information about your project, including it's name, artist and the location
+on your computer where it will be stored."
 label_settings = SubResource("LabelSettings_upmy7")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ChartName" type="LineEdit" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
-offset_left = 69.0
-offset_top = 184.0
-offset_right = 325.0
-offset_bottom = 215.0
-placeholder_text = "My Chart"
-alignment = 1
-
 [node name="ChartName Label" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
-anchors_preset = -1
-anchor_left = 0.50100005
-anchor_right = 0.50100005
-offset_left = -63.89102
-offset_top = 151.0
-offset_right = 67.10898
-offset_bottom = 174.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.0
+offset_top = 86.89
+offset_right = 47.0
+offset_bottom = 109.89001
+grow_horizontal = 2
 text = "Chart Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProjectDir Label" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
-anchors_preset = -1
-anchor_left = 0.50100005
-anchor_right = 0.50100005
-offset_left = -63.891006
-offset_top = 333.0
-offset_right = 67.10898
-offset_bottom = 356.0
-text = "Project Directory"
+[node name="ChartName" type="LineEdit" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -183.697
+offset_top = 115.705
+offset_right = 183.696
+offset_bottom = 146.70508
+grow_horizontal = 2
+tooltip_text = "The name of this chart. Cannot contain non-ASCII characters and Backslashes (confuses the editor)"
+placeholder_text = "My Chart"
+alignment = 1
+metadata/wiz_input = true
+
+[node name="Charter Label" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 105.5
+offset_top = 158.97
+offset_right = 164.5
+offset_bottom = 181.97002
+grow_horizontal = 2
+pivot_offset = Vector2(59.151, -204)
+text = "Charter"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SongArtist" type="LineEdit" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
-offset_left = 68.0
-offset_top = 257.0
-offset_right = 324.0
-offset_bottom = 288.0
-tooltip_text = "Where the chart will be stored on your Computer. You can either type the path manually or use the 'Choose' button to open a dialog for you."
+[node name="Charter" type="LineEdit" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 7.0
+offset_top = 187.6
+offset_right = 263.0
+offset_bottom = 218.60002
+grow_horizontal = 2
+pivot_offset = Vector2(122, -236)
+tooltip_text = "The person who made the chart (usually you)."
 placeholder_text = "John Doe"
 alignment = 1
+metadata/wiz_input = true
 
 [node name="SongArtist Label" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
-anchors_preset = -1
-anchor_left = 0.50100005
-anchor_right = 0.50100005
-offset_left = -64.151
-offset_top = 225.0
-offset_right = 66.849
-offset_bottom = 248.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -157.5
+offset_top = 158.97
+offset_right = -114.5
+offset_bottom = 181.97002
+grow_horizontal = 2
+pivot_offset = Vector2(59.151, -204)
 text = "Artist"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="SongArtist" type="LineEdit" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -262.0
+offset_top = 187.6
+offset_right = -6.0
+offset_bottom = 218.60002
+grow_horizontal = 2
+pivot_offset = Vector2(122, -236)
+tooltip_text = "The person who wrote the song used in the chart."
+placeholder_text = "John Doe"
+alignment = 1
+metadata/wiz_input = true
+
+[node name="ProjectDir Label" type="Label" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.5
+offset_top = 242.21
+offset_right = 65.5
+offset_bottom = 265.2102
+grow_horizontal = 2
+pivot_offset = Vector2(58.89099, -312)
+text = "Project Directory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProjectDir" type="LineEdit" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -299.207
+offset_top = 272.78
+offset_right = 299.20798
+offset_bottom = 303.78018
+grow_horizontal = 2
+pivot_offset = Vector2(186, -344)
+tooltip_text = "Where the chart will be stored on your Computer."
+placeholder_text = "e.g.: C:/Users/JohnDoe/Documents/Syncra"
+alignment = 1
+metadata/wiz_input = true
+
 [node name="NextBtn" type="Button" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
-offset_left = 120.0
-offset_top = 446.0
-offset_right = 272.0
-offset_bottom = 477.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_top = 444.525
+offset_right = 76.0
+offset_bottom = 475.52512
+grow_horizontal = 2
+tooltip_text = "Continue to the Audio Setup stage."
 text = "Next - Audio Setup"
+
+[node name="HSeparator" type="HSeparator" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.348
+offset_top = 80.695
+offset_right = 224.347
+offset_bottom = 84.695
+grow_horizontal = 2
+
+[node name="ProjectDirDialog" type="FileDialog" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+title = "Open a Directory"
+initial_position = 2
+ok_button_text = "Select"
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[node name="ProjectDirChooseBtn" type="Button" parent="Menu/Start Panel/ChartWizard/BasicMetadata"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_top = 310.065
+offset_right = 76.0
+offset_bottom = 341.06512
+grow_horizontal = 2
+text = "Choose Directory..."
+
+[node name="AudioSetup" type="Control" parent="Menu/Start Panel/ChartWizard"]
+physics_interpolation_mode = 0
+visible = false
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+script = ExtResource("4_gx2gx")
+next_button_path = NodePath("NextBtn")
+
+[node name="Section Title" type="Label" parent="Menu/Start Panel/ChartWizard/AudioSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.0
+offset_top = 10.0
+offset_right = 94.0
+offset_bottom = 33.0
+grow_horizontal = 2
+pivot_offset = Vector2(94, 11.5)
+text = "Stage 2 - Audio Setup"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="Menu/Start Panel/ChartWizard/AudioSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -230.28
+offset_top = 34.425
+offset_right = 230.28
+offset_bottom = 83.375
+grow_horizontal = 2
+text = "Here, you must provide both an Audio File for your Project as well as basic information
+about it, such as BPM and Time Signature. You may also optionally define BPM changes."
+label_settings = SubResource("LabelSettings_upmy7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Menu/Start Panel/ChartWizard/AudioSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.348
+offset_top = 80.695
+offset_right = 224.347
+offset_bottom = 84.695
+grow_horizontal = 2
+
+[node name="AudioFile Label" type="Label" parent="Menu/Start Panel/ChartWizard/AudioSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.5
+offset_top = 92.21001
+offset_right = 65.5
+offset_bottom = 115.210205
+grow_horizontal = 2
+pivot_offset = Vector2(58.89099, -312)
+text = "Audio File"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioFile" type="LineEdit" parent="Menu/Start Panel/ChartWizard/AudioSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -299.207
+offset_top = 122.77998
+offset_right = 299.20798
+offset_bottom = 153.78017
+grow_horizontal = 2
+pivot_offset = Vector2(186, -344)
+tooltip_text = "Where the chart will be stored on your Computer. You can either type the path manually or use the 'Choose' button to open a dialog for you."
+placeholder_text = "e.g.: C:/Users/JohnDoe/Music/MySong.ogg"
+alignment = 1
+metadata/wiz_input = true
+
+[node name="AudioFileChooseBtn" type="Button" parent="Menu/Start Panel/ChartWizard/AudioSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -77.5
+offset_top = 160.06502
+offset_right = 77.5
+offset_bottom = 191.06514
+grow_horizontal = 2
+text = "Choose File..."
+
+[node name="NextBtn" type="Button" parent="Menu/Start Panel/ChartWizard/AudioSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_top = 444.525
+offset_right = 76.0
+offset_bottom = 475.52512
+grow_horizontal = 2
+text = "Next - Audio Setup"
+
+[node name="AudioFileDialog" type="FileDialog" parent="Menu/Start Panel/ChartWizard/AudioSetup"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+title = "Open a File"
+initial_position = 2
+ok_button_text = "Select"
+file_mode = 0
+access = 2
+use_native_dialog = true
+
+[node name="GuideVertical" type="VSeparator" parent="Menu/Start Panel/ChartWizard"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -245.4375
+offset_right = 2.0
+offset_bottom = 245.4375
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GuideHorizontal" type="VSeparator" parent="Menu/Start Panel/ChartWizard"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 316.31
+offset_top = 0.42300415
+offset_right = 320.31
+offset_bottom = 633.36804
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964

@@ -1,4 +1,4 @@
-extends Node
+extends Control
 class_name NCWizStage
 
 signal stage_complete(data: Dictionary)
@@ -10,6 +10,8 @@ signal stage_complete(data: Dictionary)
 func _ready():
 	if is_instance_valid(next_button):
 		next_button.pressed.connect(_on_next_pressed)
+
+
 
 func _on_next_pressed():
 	var data = collect_stage_data()
@@ -31,5 +33,16 @@ func collect_stage_data() -> Dictionary:
 				SpinBox, Slider:
 					data[child.name] = child.value
 				_:
-					data[child.name] = child.get("text") if child.has_method("get") and child.has_property("text") else null
+					var prop_list = child.get_property_list()
+					var prop_names = []
+					for prop in prop_list:
+						if prop is Dictionary and "name" in prop:
+							prop_names.append(prop["name"])
+					
+					if "text" in prop_names:
+						data[child.name] = child.get("text")
+					elif "value" in prop_names:
+						data[child.name] = child.get("value")
+					else:
+						data[child.name] = null
 	return data

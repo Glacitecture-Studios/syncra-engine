@@ -10,7 +10,7 @@ const MACOS_VERSION_MAP := {
 	"11": "Big Sur"
 }
 
-func get_pretty_os_name() -> String:
+static func get_pretty_os_name() -> String:
 	var platform := OS.get_name()
 	
 	match platform:
@@ -23,7 +23,7 @@ func get_pretty_os_name() -> String:
 		_:
 			return platform
 
-func _get_windows_pretty_name() -> String:
+static func _get_windows_pretty_name() -> String:
 	var output := []
 	var err := OS.execute("cmd", ["/c", "ver"], output, true)
 	if err == OK and output.size() > 0:
@@ -36,7 +36,7 @@ func _get_windows_pretty_name() -> String:
 			return "Windows (Unknown Version)"
 	return "Windows"
 
-func _get_macos_pretty_name() -> String:
+static func _get_macos_pretty_name() -> String:
 	var output := []
 	var err := OS.execute("usr/bin/sw_vers", ["-productVersion"], output, true)
 	if err == OK and output.size() > 0:
@@ -46,7 +46,7 @@ func _get_macos_pretty_name() -> String:
 		return "macOS %s (%s)" % [version_name, version_str]
 	return "macOS"
 	
-func _get_linux_pretty_name() -> String:
+static func _get_linux_pretty_name() -> String:
 	var output := []
 	var err := OS.execute("lsb_release", ["-d"], output, true)
 	if err == OK and output.size() > 0:

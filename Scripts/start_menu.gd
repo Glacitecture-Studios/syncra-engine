@@ -5,6 +5,8 @@ extends Panel
 @onready var preferences_button = $"Preferences"
 @onready var exit_button = $"Exit"
 
+@onready var new_chart_wizard = $"ChartWizard"
+
 @onready var coreutils = SyncraUtils.new()
 
 var data = {
