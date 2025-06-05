@@ -35,7 +35,8 @@ Syncra Engine posts compiled binaries for Windows, macOS and Linux (debian & tar
 you want to build it from the source:
 
 **Steps (building from source, macOS not recommended):**
-> [!NOTE] You will need Godot 4 or higher to build from source.
+> [!NOTE]
+> You will need Godot 4 or higher to build from source.
 > Building from source on macOS is not recommended, as if the project's dependencies change
 > or we update the build settings, the binaries will need re-notarizing.
 1. Clone the repository with Git
@@ -48,11 +49,11 @@ git clone https://perditum.com/glacitecture-studios/syncra-engine.git
 
 4. Choose the operating system you want to export for and click 'Export Project'.
 
-> [!WARNING] If you are building for macOS:
-> DO NOT CHANGE THE BUILD SETTINGS. I REPEAT. **DO. NOT. CHANGE. THE. BUILD. SETTINGS.** Syncra Engine has been specifically notarized with
-> the signature that was made using the Build Settings all of our pre-made binaries are released with.
-> Changing the build settings can change the signature and thus make it unrecognizable to Gatekeeper,
-> therefore flagging it and making it unusable.
+> [!WARNING]
+> If you are building for macOS:
+> DO NOT CHANGE THE BUILD SETTINGS. I REPEAT. **DO. NOT. CHANGE. THE. BUILD. SETTINGS.**
+> Even slight changes in the engine's binary can make it completely unknown to macOS Gatekeeper
+> and thus not make it runnable on your system.
 
 5. Run Syncra Engine from the location you exported
 
