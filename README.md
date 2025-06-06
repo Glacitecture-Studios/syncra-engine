@@ -19,15 +19,16 @@
 
 **Syncra Engine** is a cross-platform, open-source rhythm game charting and scripting engine built in **Godot Engine 4.x**. It is designed to help developers create complex rhythm game experiences with ease and export them to a variety of game engines including Unity, Unreal, Godot, Bevy, and more.
 
-## Features
+## Planned Features
+Features marked with an :x: are not implemented yet.
 
-- 🎼 **Global Rhythm Charting Editor** — Time-based event charting with beat snapping, zooming, waveform display, and audio sync.
-- 🧩 **Modular Event System** — Define, trigger, and export custom code events across engines.
-- 🔁 **Flexible Timeline and Layers** — Insert audio events, visual events, gameplay markers, and sync cues on distinct layers.
-- 💾 **Custom `.syncra` File Format** — Export charts into structured project archives for engine-agnostic use.
-- ⚙️ **Cross-Engine Exporters** — Built-in exporters for Unity (C#), Unreal (C++), Godot (GDScript), Bevy (Rust), and more.
-- 🎛️ **Customizable Preferences** — Full UI/UX customization, themes, snapping, audio settings, and more.
-- 🧩 **Plugin Architecture** — Extend editor functionality using GDScript or your own plugins.
+- :x: **Global Rhythm Charting Editor** — Time-based event charting with beat snapping, zooming, waveform display, and audio sync.
+- :x: **Modular Event System** — Define, trigger, and export custom code events across engines.
+- :x: **Flexible Timeline and Layers** — Insert audio events, visual events, gameplay markers, and sync cues on distinct layers.
+- :x: **Custom `.syncra` File Format** — Export charts into structured project archives for engine-agnostic use.
+- :x: **Cross-Engine Exporters** — Built-in exporters for Unity (C#), Unreal (C++), Godot (GDScript), Bevy (Rust), and more.
+- :x: **Customizable Preferences** — Full UI/UX customization, themes, snapping, audio settings, and more.
+- :x: **Plugin Architecture** — Extend editor functionality using GDScript or your own plugins.
 
 ## Quick Start Guide:
 #### NOTE: Please refer to the Wiki for a more detailed, in-depth guide on each tool this engine has to offer
