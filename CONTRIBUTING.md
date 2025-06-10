@@ -2,15 +2,11 @@
 
 Thank you for your interest in contributing to **Syncra Engine**! Your help is what makes this project grow into a powerful tool for rhythm game development. This document will guide you through the contribution process.
 
----
-
 ## Before You Start
 
 - Ensure you're using the latest version of **Godot Engine 4.x**.
 - Familiarize yourself with how the editor is structured (see `README.md`).
 - Read this document thoroughly before submitting a pull request.
-
----
 
 ## Reporting Issues
 
@@ -32,8 +28,6 @@ Before you post, make sure that:
 
 If we find the bug to be reproducable and valid, it will be marked with the `bug` tag and a `risk` tag according to the level of risk the bug introduces.
 
----
-
 ## Requesting Features
 
 We welcome new ideas! Please include:
@@ -47,9 +41,7 @@ We label viable feature ideas with `enhancement` and may discuss them before app
 ## Want to make a custom Syncra Runtime Library?
 
 **Please contact us first.** Generally, we don't mind people making custom external libraries for Syncra Engine but in the case of our Custom Runtime Libraries for different game engines, we ask that you get explicit authorization from us first.
-This is typically because 
-
----
+This is typically because we may already have plans to expand to these engines and we want to avoid having the confusion between third-party CRLs (custom runtime libraries) and the official ones made by us.
 
 ## 🛠 Making Contributions
 
@@ -76,13 +68,13 @@ When making changes, we HIGHLY recommend:
 - Make sure commits are atomic and descriptive
 - Test your changes thoroughly
 
-### 4. Push and open a merge request
+### 4. Push and open a pull request
 
 ```bash
 git push origin feature/feature_name
 ```
 
-Afterwards, go into GitLab and open a merge request for `main`
+Afterwards, go into GitHub and open a pull request for `main`
 
 ## Code Styling Guidelines
 
@@ -92,7 +84,7 @@ Afterwards, go into GitLab and open a merge request for `main`
 - Add comments for complex logic. (This is SO INCREDIBLY IMPORTANT THAT YOU DO THIS, People will not spend hours and hours deciphering your code. Please be considerate of other developers.)
 - Organize scenes and scripts in appropriate subfolders (ui/, editor/, core/, etc).
 
-## Merge Request Checklist
+## Pull Request Checklist
 
 - The PR description clearly explains the purpose.
 - Code follows style guidelines (see above)
