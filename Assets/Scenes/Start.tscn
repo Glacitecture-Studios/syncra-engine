@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://ct4itwpu8cc1g"]
+[gd_scene load_steps=14 format=3 uid="uid://ct4itwpu8cc1g"]
 
-[ext_resource type="Theme" uid="uid://b1bjtvfk3rb05" path="res://Dark_Theme.tres" id="1_52bhu"]
+[ext_resource type="Theme" uid="uid://b1bjtvfk3rb05" path="res://Assets/Themes/Dark_Theme.tres" id="1_52bhu"]
 [ext_resource type="Script" uid="uid://begvdrakmwa3e" path="res://Scripts/start_menu.gd" id="2_gx2gx"]
-[ext_resource type="Texture2D" uid="uid://h44wwew1oj52" path="res://Syncra.png" id="2_upmy7"]
+[ext_resource type="Texture2D" uid="uid://h44wwew1oj52" path="res://Assets/Images/Syncra.png" id="2_upmy7"]
 [ext_resource type="Script" uid="uid://dq273ehb8pc1o" path="res://Scripts/NCWiz/NCWizStage.gd" id="4_gx2gx"]
+[ext_resource type="Texture2D" uid="uid://dnv7vl65uxs5b" path="res://Assets/Images/github-mark-white.png" id="4_nkflh"]
 [ext_resource type="Script" uid="uid://dhn6wmi31vcmj" path="res://Scripts/NCWiz/NCWizard.gd" id="4_xhal0"]
+[ext_resource type="Texture2D" uid="uid://be8rx0ql2jni" path="res://Assets/Images/Discord-Symbol-White.png" id="5_lkcov"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gx2gx"]
 bg_color = Color(0.045299865, 0.09711627, 0.14631459, 1)
@@ -16,12 +18,12 @@ corner_radius_bottom_left = 25
 [sub_resource type="LabelSettings" id="LabelSettings_xhal0"]
 font_size = 25
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b54qk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46pen"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(7.941574e-07, 0.25192437, 0.32310233, 0.6)
+bg_color = Color(1.2032688e-08, 0.1557444, 0.22624674, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -40,12 +42,12 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46pen"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b54qk"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(1.2032688e-08, 0.1557444, 0.22624674, 0.6)
+bg_color = Color(7.941574e-07, 0.25192437, 0.32310233, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -113,9 +115,9 @@ theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 theme_override_font_sizes/font_size = 25
-theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_46pen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
 text = "New Chart"
 
 [node name="Open Chart" type="Button" parent="Menu/Start Panel"]
@@ -132,9 +134,9 @@ theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 theme_override_font_sizes/font_size = 25
-theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_46pen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
 text = "Open Existing Chart"
 
 [node name="Preferences" type="Button" parent="Menu/Start Panel"]
@@ -151,9 +153,9 @@ theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 theme_override_font_sizes/font_size = 25
-theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_46pen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
 text = "Preferences"
 
 [node name="Exit" type="Button" parent="Menu/Start Panel"]
@@ -170,16 +172,47 @@ theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 theme_override_font_sizes/font_size = 25
-theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_46pen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tfw5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b54qk")
 text = "Quit Editor"
+
+[node name="GitHub Button" type="TextureButton" parent="Menu/Start Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -80.5
+offset_right = 82.5
+offset_bottom = -24.25
+grow_vertical = 0
+tooltip_text = "Opens a link to Syncra Engine's GitHub Repository in your default browser."
+texture_normal = ExtResource("4_nkflh")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Discord Button" type="TextureButton" parent="Menu/Start Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 97.0
+offset_top = -73.0
+offset_right = 154.5
+offset_bottom = -29.25
+grow_vertical = 0
+tooltip_text = "Opens an invite to the Syncra Engine Community Discord Hub in your default browser."
+texture_normal = ExtResource("5_lkcov")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="ChartWizard" type="Window" parent="Menu/Start Panel"]
 oversampling_override = 1.0
 title = "Chart Creator Wizard"
 initial_position = 1
 size = Vector2i(640, 490)
+visible = false
 exclusive = true
 unresizable = true
 min_size = Vector2i(640, 490)
@@ -188,6 +221,7 @@ script = ExtResource("4_xhal0")
 
 [node name="BasicMetadata" type="Control" parent="Menu/Start Panel/ChartWizard"]
 physics_interpolation_mode = 0
+visible = false
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -397,7 +431,6 @@ text = "Choose Directory..."
 
 [node name="AudioSetup" type="Control" parent="Menu/Start Panel/ChartWizard"]
 physics_interpolation_mode = 0
-visible = false
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -541,3 +574,24 @@ offset_bottom = 633.36804
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 1.5707964
+
+[node name="Window" type="Window" parent="Menu"]
+transparent_bg = true
+oversampling_override = 1.0
+title = "Preferences"
+initial_position = 1
+size = Vector2i(800, 600)
+transparent = true
+
+[node name="PanelContainer" type="PanelContainer" parent="Menu/Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/Window/PanelContainer"]
+layout_mode = 2
+
+[node name="Tree" type="Tree" parent="Menu/Window/PanelContainer/HBoxContainer"]
+layout_mode = 2

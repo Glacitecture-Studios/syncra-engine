@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h44wwew1oj52"
-path="res://.godot/imported/Syncra.png-f038b2b498e25c3615ee16c774bef739.ctex"
+path="res://.godot/imported/Syncra.png-465cb5da8f4c8986feda2628b203f21f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Syncra.png"
-dest_files=["res://.godot/imported/Syncra.png-f038b2b498e25c3615ee16c774bef739.ctex"]
+source_file="res://Assets/Images/Syncra.png"
+dest_files=["res://.godot/imported/Syncra.png-465cb5da8f4c8986feda2628b203f21f.ctex"]
 
 [params]
 

@@ -11,13 +11,7 @@ config_version=5
 [application]
 
 config/name="Syncra Engine"
-config/description="Syncra Engine is a Global Rhythm Game Level Editor developed by Glacitecture Studios that supports multiple different types of Rhythm Games. This application is the Syncra Engine Editor, which allows you to choose a Level Type and then export it to a .syncra file when you're done with the level and import it into your Engine of Choice!
-
-Syncra currently supports a select few Game Engines, but does not support raw Programming Languages like the .NET Family or Rust:
-- Unity Engine
-- Unreal Engine
-- Godot Engine
-"
+config/description="Syncra Engine is a Global Rhythm Game Level Editor developed by Glacitecture Studios that supports multiple different types of Rhythm Games. This application is the Syncra Editor, which allows you to create level intuitively and define custom code for them. These can then be exported to a proprietary Syncra Archive (.syncra) and imported into your engine of choice."
 run/main_scene="uid://ct4itwpu8cc1g"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://h44wwew1oj52"
@@ -31,6 +25,10 @@ Preferences="*res://Scripts/preferences.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[dotnet]
+
+project/assembly_name="Syncra Engine"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
@@ -39,7 +37,10 @@ version_control/autoload_on_startup=true
 [file_customization]
 
 folder_colors={
-"res://Scripts/": "yellow"
+"res://Assets/": "green",
+"res://Scripts/": "yellow",
+"res://addons/": "purple",
+"res://docs/": "teal"
 }
 
 [input]

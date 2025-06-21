@@ -1,0 +1,70 @@
+{
+    "$id": "https://github.com/WinterBlox/syncra-engine/tree/main/schemas/schema_project.json",
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "Syncra Project Schema",
+    "description": "Schema for Syncra project files, defining the structure and types of data used in a Syncra project.",
+    "type": "object",
+    "properties": {
+        "project_name": {
+            "type": "string",
+            "description": "The name of the Syncra project."
+        },
+        "artist": {
+            "type": "string",
+            "description": "The name of the artist or creator of the project."
+        },
+        "charter": {
+            "type": "array",
+            "description": "The charter(s) of the project",
+            "items": {
+                "type": "string"
+            }
+        },
+        "preview_offset": {
+            "type": "number",
+            "description": "Where the song preview will start in seconds."
+        },
+        "bpm": {
+            "type": "number",
+            "description": "The beats per minute of the song."
+        },
+        "difficulties": {
+            "type": "array",
+            "description": "The difficulties available in the project.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the difficulty."
+                    },
+                    "color": {
+                        "type": "string",
+                        "description": "The color associated with the difficulty, in hex format.",
+                        "pattern": "^[0-9A-Fa-f]{6}$"
+                    },
+                    "level": {
+                        "type": "integer",
+                        "description": "The level of the difficulty, typically a number representing the challenge it presents."
+                    }
+                },
+                "required": ["name", "level"]
+            }
+        },
+        "custom_data": {
+            "type": "object",
+            "description": "Custom data for the project, allowing for additional metadata or configuration.",
+            "additionalProperties": true
+        },
+        "syncra_version": {
+            "type": "string",
+            "description": "The version of Syncra that the project is compatible with.",
+            "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$"
+        },
+        "created_for": {
+            "type": "object",
+            "description": "Information about the game engine which the project was created for.",
+            "additionalProperties": true
+        }
+    }
+}

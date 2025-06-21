@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://bd3k81ss1q8k7"]
 
 [ext_resource type="Script" uid="uid://b78f7stbtjdeg" path="res://Scripts/syncra_utils.gd" id="1_dlksc"]
-[ext_resource type="Theme" uid="uid://b1bjtvfk3rb05" path="res://Dark_Theme.tres" id="1_uubjt"]
-[ext_resource type="Texture2D" uid="uid://h44wwew1oj52" path="res://Syncra.png" id="2_5yleq"]
+[ext_resource type="Theme" uid="uid://b1bjtvfk3rb05" path="res://Assets/Themes/Dark_Theme.tres" id="1_uubjt"]
+[ext_resource type="Texture2D" uid="uid://h44wwew1oj52" path="res://Assets/Images/Syncra.png" id="2_5yleq"]
 [ext_resource type="Script" uid="uid://c5cvppvk6fuc7" path="res://Scripts/fileMenu.gd" id="3_ylpcl"]
 [ext_resource type="Script" uid="uid://cjv3uljan15xg" path="res://Scripts/helpMenu.gd" id="4_cx167"]
 [ext_resource type="Script" uid="uid://15dyd40y150h" path="res://Scripts/exportMenu.gd" id="4_n4eug"]
@@ -305,36 +305,39 @@ item_3/id = 3
 [node name="Sync" type="PopupMenu" parent="Main/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
-item_count = 10
-item_0/text = "Connect to Remote Project..."
+item_count = 11
+item_0/text = "Create Repository"
 item_0/id = 0
-item_1/id = 3
-item_1/disabled = true
-item_1/separator = true
-item_2/text = "Sync With Server"
-item_2/id = 1
+item_0/disabled = true
+item_1/text = "Connect to Remote Project..."
+item_1/id = 1
+item_2/id = 2
 item_2/disabled = true
-item_3/text = "Pull Changes"
-item_3/id = 2
+item_2/separator = true
+item_3/text = "Sync With Server"
+item_3/id = 3
 item_3/disabled = true
-item_4/text = "Push Changes"
+item_4/text = "Pull Changes"
 item_4/id = 4
 item_4/disabled = true
-item_5/text = "View Sync Logs"
+item_5/text = "Push Changes"
 item_5/id = 5
 item_5/disabled = true
-item_6/text = "Resolve Conflicts"
+item_6/text = "View Sync Logs"
 item_6/id = 6
 item_6/disabled = true
-item_7/text = "Commit Changes"
+item_7/text = "Resolve Conflicts"
 item_7/id = 7
 item_7/disabled = true
-item_8/id = 9
+item_8/text = "Commit Changes"
+item_8/id = 8
 item_8/disabled = true
-item_8/separator = true
-item_9/text = "Manage Collaborators"
-item_9/id = 8
+item_9/id = 9
 item_9/disabled = true
+item_9/separator = true
+item_10/text = "Manage Collaborators"
+item_10/id = 10
+item_10/disabled = true
 
 [node name="Plugins" type="PopupMenu" parent="Main/Menu"]
 auto_translate_mode = 1

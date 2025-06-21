@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xf54nq0cxjls"
-path="res://.godot/imported/nd.svg-0d113da6bde3b018bcf05237770e8049.ctex"
+uid="uid://be8rx0ql2jni"
+path="res://.godot/imported/Discord-Symbol-White.png-84b7b9d2273b00ed1cdee2b98b060882.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CC Icons/nd.svg"
-dest_files=["res://.godot/imported/nd.svg-0d113da6bde3b018bcf05237770e8049.ctex"]
+source_file="res://Assets/Images/Discord-Symbol-White.png"
+dest_files=["res://.godot/imported/Discord-Symbol-White.png-84b7b9d2273b00ed1cdee2b98b060882.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

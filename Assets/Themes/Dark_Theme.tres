@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://b1bjtvfk3rb05"]
 
-[ext_resource type="StyleBox" uid="uid://daxd73578opb1" path="res://Panel_Dark.tres" id="1_fs8pe"]
+[ext_resource type="StyleBox" uid="uid://daxd73578opb1" path="res://Assets/Themes/Panel_Dark.tres" id="1_fs8pe"]
 
 [sub_resource type="SystemFont" id="SystemFont_fs8pe"]
 
