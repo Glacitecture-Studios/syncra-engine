@@ -1,4 +1,4 @@
-![GitHub branch status](https://img.shields.io/github/checks-status/WinterBlox/syncra-engine/main)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/WinterBlox/syncra-engine/total?color=355676)
 ![GitHub Repo stars](https://img.shields.io/github/stars/WinterBlox/syncra-engine)
 
 
