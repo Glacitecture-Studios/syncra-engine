@@ -2,11 +2,10 @@
 
 [ext_resource type="Theme" uid="uid://b1bjtvfk3rb05" path="res://Assets/Themes/Dark_Theme.tres" id="1_uubjt"]
 [ext_resource type="Texture2D" uid="uid://h44wwew1oj52" path="res://Assets/Images/Syncra.png" id="2_5yleq"]
+[ext_resource type="Script" uid="uid://5ijl2u7w4vgt" path="res://Scripts/console.gd" id="3_ykrdu"]
 [ext_resource type="Script" uid="uid://c5cvppvk6fuc7" path="res://Scripts/fileMenu.gd" id="3_ylpcl"]
-[ext_resource type="Script" path="res://Assets/Scenes/console.gd" id="4_3xrxe"]
 [ext_resource type="Script" uid="uid://cjv3uljan15xg" path="res://Scripts/helpMenu.gd" id="4_cx167"]
 [ext_resource type="Script" uid="uid://d3k1s847b6g5l" path="res://Scripts/about_window.gd" id="5_dolsu"]
-[ext_resource type="PackedScene" path="res://Objects/placeable_object.tscn" id="7_3xrxe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ykrdu"]
 bg_color = Color(0.05490196, 0.10980392, 0.16078432, 1)
@@ -22,6 +21,14 @@ border_width_bottom = 3
 bg_color = Color(0.09803922, 0.1764706, 0.2509804, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xrxe"]
+bg_color = Color(0.05490196, 0.10980392, 0.16078432, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_bottom = 3
+corner_radius_top_left = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2wkk"]
 bg_color = Color(0.05490196, 0.10980392, 0.16078432, 1)
 border_width_left = 3
 border_width_top = 3
@@ -118,7 +125,7 @@ anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -384.0
 offset_top = 32.0
-offset_bottom = 720.0
+offset_bottom = 376.0
 grow_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_3xrxe")
 
@@ -151,10 +158,58 @@ layout_mode = 0
 offset_left = 10.0
 offset_top = 50.0
 offset_right = 378.0
-offset_bottom = 672.0
+offset_bottom = 328.0
 horizontal_scroll_mode = 2
+vertical_scroll_mode = 2
 
 [node name="Properties" type="VBoxContainer" parent="Interface/Spyglass/ScrollContainer"]
+layout_mode = 2
+
+[node name="Layers" type="Panel" parent="Interface/Spyglass"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -384.0
+offset_top = 344.0
+offset_bottom = 687.9993
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2wkk")
+
+[node name="Label" type="Label" parent="Interface/Spyglass/Layers"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -33.0
+offset_top = 3.0
+offset_right = 33.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "Layers"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Interface/Spyglass/Layers"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -182.0
+offset_top = 27.0
+offset_right = 186.0
+offset_bottom = 33.0
+grow_horizontal = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Interface/Spyglass/Layers"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 50.0
+offset_right = 378.0
+offset_bottom = 328.0
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 2
+
+[node name="Properties" type="VBoxContainer" parent="Interface/Spyglass/Layers/ScrollContainer"]
 layout_mode = 2
 
 [node name="Console" type="Panel" parent="Interface"]
@@ -170,7 +225,7 @@ offset_right = 256.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0co75")
-script = ExtResource("4_3xrxe")
+script = ExtResource("3_ykrdu")
 
 [node name="Label" type="Button" parent="Interface/Console"]
 layout_mode = 1
@@ -633,14 +688,4 @@ text = "Editing 'N/A' | Difficulty: 'N/A'"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Placeable Object" parent="." instance=ExtResource("7_3xrxe")]
-position = Vector2(544, 544)
-
-[node name="Placeable Object2" parent="." instance=ExtResource("7_3xrxe")]
-position = Vector2(608, 480)
-
-[node name="Placeable Object3" parent="." instance=ExtResource("7_3xrxe")]
-position = Vector2(672, 416)
-
-[node name="Placeable Object4" parent="." instance=ExtResource("7_3xrxe")]
-position = Vector2(736, 352)
+[connection signal="pressed" from="Interface/Console/Label" to="Interface/Console" method="_on_title_pressed"]
