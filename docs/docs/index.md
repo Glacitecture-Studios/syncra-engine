@@ -38,8 +38,5 @@ While Syncra does try to make integration into most popular engines easy and sim
 every kind of Game Engine in existence. As such, we've tried to focus on some of the most commonly used ones.
 
 - Unity Engine (C#)
-- Unreal Engine (Blueprints/C++)
 - Godot Engine (GDScript)
-- Bevy ECS (Rust)
 - GameMaker (GML)
-- PyGame (Python)

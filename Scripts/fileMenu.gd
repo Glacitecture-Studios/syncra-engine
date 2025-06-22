@@ -10,8 +10,8 @@ func _ready() -> void:
 	# Ensure the PopupMenu node is correctly assigned
 	if mainMenu and subMenuExport and subMenuImport:
 		# Add Menus
-		mainMenu.add_item("New Chart", 0)
-		mainMenu.add_item("Open Chart", 1)
+		mainMenu.add_item("New Project", 0)
+		mainMenu.add_item("Open Project", 1)
 		mainMenu.add_item("Save", 2)
 		mainMenu.add_item("Save As", 3)
 		mainMenu.add_separator("", 4)
@@ -33,7 +33,7 @@ func _ready() -> void:
 		
 func _on_id_pressed(id: int):
 	if id == 10:
-		coreutils.close_game()
+		get_tree().quit()
 		
 		
 func make_shortcut(action: String) -> Shortcut:
