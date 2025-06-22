@@ -1,6 +1,6 @@
-![GitHub License](https://img.shields.io/github/license/WinterBlox/https%3A%2F%2Fgithub.com%2FWinterBlox%2Fsyncra-engine)
-![GitHub Repo stars](https://img.shields.io/github/stars/WinterBlox/https%3A%2F%2Fgithub.com%2FWinterBlox%2Fsyncra-engine)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/WinterBlox/!%5BGitHub%20Repo%20stars%5D(https%3A%2F%2Fimg.shields.io%2Fgithub%2Fstars%2FWinterBlox%2Fhttps%253A%252F%252Fgithub.com%252FWinterBlox%252Fsyncra-engine))
+![GitHub branch status](https://img.shields.io/github/checks-status/WinterBlox/syncra-engine/main)
+![GitHub Repo stars](https://img.shields.io/github/stars/WinterBlox/syncra-engine)
+
 
 ## Table of Contents
 1. [Features](#features)
