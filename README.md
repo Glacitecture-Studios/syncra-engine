@@ -40,7 +40,7 @@ Features marked with an :x: are not implemented yet.
 If you haven't noticed already, the `.syncra` file format is a zip-based archive format.
 
 It contains:
-- `project-syncra.json` Metadata and Config
+- `project.json` Metadata and Config
 - `charts/`
     - `example-syncra_chart.json` - Timeline data
 - `audio/` - Original audio file and any other audio files
@@ -49,7 +49,7 @@ It contains:
 ## Community
 
 We're currently in the process of setting up a Discord Server where you can discuss the Syncra Family of Applications!
-Join us once the engine hits beta for a special role~!
+Join us once the engine hits beta for a special role!
 
 ## License
 
