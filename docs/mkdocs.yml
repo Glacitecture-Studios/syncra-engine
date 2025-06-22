@@ -1,5 +1,5 @@
 site_name: Syncra Engine Documentation
-site_url: https://mydomain.org/mysite
+site_url: https://winterblox.github.io/syncra-engine/
 nav:
   - Home: "index.md"
   - 'Getting Started':
