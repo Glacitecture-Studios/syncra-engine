@@ -17,7 +17,7 @@
 
 # Syncra Engine
 
-**Syncra Engine** is a cross-platform, open-source rhythm game charting and scripting engine built in **Godot Engine 4.x**. It is designed to help developers create complex rhythm game experiences with ease and export them to a variety of game engines including Unity, Unreal, Godot, Bevy, and more.
+**Syncra Engine** is a cross-platform, open-source rhythm game charting and scripting engine built in **Godot Engine 4.x**. It is designed to help developers create complex rhythm game experiences with ease and export them to a variety of game engines including Unity, Godot, GameMaker and more (soon).
 
 ## Planned Features
 Features marked with an :x: are not implemented yet.
