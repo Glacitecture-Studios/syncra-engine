@@ -26,5 +26,3 @@ Syncra Engine is licensed under the MIT license.
 
 Huge thanks to the Godot Engine community, open-source contributors worldwide, and everyone helping keep rhythm games alive.
 
-## Contributors
-
