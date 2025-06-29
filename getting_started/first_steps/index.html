@@ -1,0 +1,746 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://winterblox.github.io/syncra-engine/getting_started/first_steps/">
+      
+      
+        <link rel="prev" href="../installation/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>First Steps - Syncra Engine Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#first-steps" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Syncra Engine Documentation" class="md-header__button md-logo" aria-label="Syncra Engine Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Syncra Engine Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              First Steps
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Syncra Engine Documentation" class="md-nav__button md-logo" aria-label="Syncra Engine Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Syncra Engine Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    First Steps
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    First Steps
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-syncra-engine-is-designed-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Syncra Engine is Designed For
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-first-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Your First Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Timeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Timeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-markers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Markers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Events
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-custom-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming Custom Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programming Custom Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fakespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fakespaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-custom-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Custom Events
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actually-charting-your-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actually Charting your Level
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exporting Your Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-syncra-engine-is-designed-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Syncra Engine is Designed For
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-first-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Your First Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Timeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Timeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-markers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Markers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Events
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-custom-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming Custom Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programming Custom Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fakespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fakespaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-custom-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Custom Events
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actually-charting-your-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actually Charting your Level
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exporting Your Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="first-steps">First Steps</h1>
+<p>Assuming you have successfully installed Syncra Engine, let's get started with your first project! First of all, it's important that we look over what Syncra Engine is capable of and what it is <em>designed</em> for, compared to what it is <em>not</em> designed for.</p>
+<h2 id="what-syncra-engine-is-designed-for">What Syncra Engine is Designed For</h2>
+<p>Syncra Engine is primarily designed as a Rhythm Game Level Editor, meaning it is intended to be used for creating and editing levels for rhythm games. Specifically, it is made with 4-7 Key Rhythm Games in mind, such as Stepmania, osu! and others. It is not designed for creating levels for other types of Rhythm Games, such as Muse Dash, Beat Saber, or any other rhythm game that does not use a 4-7 Key system.</p>
+<h2 id="creating-your-first-project">Creating Your First Project</h2>
+<p>To create your first project, open Syncra Engine and go to the <code>File</code> menu, then select <code>New Project</code>. This will bring up the Chart Wizard, which will guide you through the process of creating a new project. You will need to provide a name for your project, select a location to save it, and choose a template to use. The template will determine the default settings for your project, such as the number of keys, the BPM, and other settings.</p>
+<p>Once you have filled out the Chart Wizard, click <code>Create Project</code> to create your new project. This will open the main editor window, where you can start creating your level.</p>
+<h2 id="understanding-the-interface">Understanding the Interface</h2>
+<p>When you first open Syncra Engine, you will be greeted with the main editor window. This window is where you will spend most of your time creating and editing your levels. The interface is designed to be intuitive and easy to use, with a focus on providing a smooth workflow for rhythm game level editing.</p>
+<p><img alt="Syncra Engine Main Editor Window" src="../../images/syncra_main_editor.png" /></p>
+<p>The main editor window is divided into several sections:</p>
+<ul>
+<li><strong>Timeline</strong>: Located in the center, This is where you will create and edit your level. You can add notes, events, and other elements to the timeline.</li>
+<li><strong>Spyglass</strong>: This is where you can view and edit the properties of the selected element in the timeline. You can change the properties of notes, events, and other elements here.</li>
+<li><strong>Layers</strong>: This is where you can manage the different layers in your project. You can add, remove, and reorder layers here.</li>
+<li><strong>File Browser</strong>: This is where you can browse and manage the files in your project. You can add, remove, and rename files here.</li>
+</ul>
+<h2 id="using-the-timeline">Using the Timeline</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This section is 'proof-of-concept', since the timeline is still in development. By the time it is implemented, this section will be updated to reflect the final design and functionality of the timeline.</p>
+</div>
+<p>The timeline is the heart of Syncra Engine, where you will create and edit your level. To add a note, simply click on the timeline where you want to place it. You can also drag and drop notes to move them around. To edit a note, simply click on it to select it, then use the Spyglass to change its properties, such as its type, position, and duration (if applicable).</p>
+<h3 id="adding-markers">Adding Markers</h3>
+<p>Markers are labels that you can place on the timeline to help you keep track of important points in your level. To add a marker, right-click on the timeline and select <code>Add Marker</code>. You can then enter a name for the marker and choose a color for it. Markers can be used to mark important points in your level, such as the start of a new section or a change in the music.</p>
+<h3 id="adding-events">Adding Events</h3>
+<p>Events are special actions that can be triggered at specific points in your level. To add an event, right-click on the timeline and select <code>Add Event</code>. You can then choose the type of event you want to add, such as a sound effect or a visual effect. Events can be used to create dynamic and interactive levels that respond to the player's actions.</p>
+<p>Syncra Engine comes with a variety of built-in events, such as sound effects, visual effects, and gameplay markers. You can also create your own custom events using GDScript or other scripting languages.</p>
+<p>For example, let's say you want a sound effect to play depending on the player's actions in a specific section of the level. You can use the <code>syncra_track_performance</code> event to start tracking the player's performance, and then use <code>syncra_end_track_performance</code> to stop tracking it. You can then use the <code>syncra_play_sound</code> event to play a sound effect based on what that method returns. This allows you to create dynamic and interactive levels that respond to the player's actions.</p>
+<h2 id="programming-custom-events">Programming Custom Events</h2>
+<p>Syncra Engine allows you to create custom events using C#, GDScript or Catspeak (GameMaker). This allows you to create unique and complex interactions in your levels that go beyond the built-in events.</p>
+<p>To create a custom event, you can go to the <code>Events</code> menu and select <code>Add New Custom Event</code>. This will prompt you to choose your language and provide a name for your event. This event will then show up in Spyglass, where you can edit its code and add any necessary parameters. You can then use this event in your level by adding it to the timeline like any other event.</p>
+<p>Keep in mind that functionality for testing and debugging custom events is <strong><em>very limited</em></strong>. Syncra Engine does not have a way to test and run a custom event's code in the editor, so you will need to export your project and run it in the target engine to test your custom events. This means that you will need to have a basic understanding of the target engine's scripting language and how to use it.</p>
+<h3 id="fakespaces">Fakespaces</h3>
+<p>In some cases, you may want to add certain namespaces or packages to your custom event to access specific functionality. Unfortunately, Syncra Engine does not currently support this, however there is an alternative which we have dubbed 'fakespaces'. Fakespaces are essentially 'dummy namespaces' that you can use to avoid console errors when using certain methods or classes that are not available in the current context. For example, if you want to use a method from a specific namespace, but that namespace is not available in the current context, you can create a fakespace with the same name and use it instead.</p>
+<p>By default, Syncra Engine comes with a few fakespaces that you can use depending on the language you are using. For example, if you are using C#, you can use the <code>System</code> fakespace to access common methods and classes that are not available in the current context. You can also create your own fakespaces by going to the <code>Events</code> menu and selecting <code>Add New Fakespace</code>.</p>
+<h3 id="debugging-custom-events">Debugging Custom Events</h3>
+<p>When creating custom events, it is important to test and debug them to ensure they work as expected. To test a Custom Event, open it in the Spyglass and click the <code>Test</code> button. This will run the event in a test environment (if possible) and display any errors or warnings in the console. </p>
+<p>It is still highly recommended to export your project and run it in the target engine to test your custom events instead, as this will give you a better understanding of how your event will behave in the final product.</p>
+<h2 id="actually-charting-your-level">Actually Charting your Level</h2>
+<p>Now that you have a basic understanding of the interface and how to use the timeline, it's time to start charting your level!</p>
+<p>Generally, charting a level involves placing notes on the timeline in sync with the music. You can do this by listening to the music and placing notes at the appropriate times. Syncra Engine provides a variety of tools to help you with this, such as beat snapping, zooming, and waveform display.</p>
+<p>The Waveform Display in particular is a very powerful tool that allows you to see the audio waveform of your music. This can help you identify the beats and other important points in the music, making it easier to place notes in sync with the music.</p>
+<p>To enable it, go into <code>View</code> and select <code>Show Waveform</code>. This will display the waveform of the currently selected audio file in the timeline. You can then use this to help you place notes in sync with the music.</p>
+<p>As for other tips and tricks regarding charting (not just in regards to Syncra), here are a few to get you started:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This section is very brief in regards to charting tips. For more in-depth tips and tricks, you can check out <a href="https://www.cosmovibe.com/ncguide/chartintro.html">ComsoVibe's Notecharting Overview</a>.</p>
+</div>
+<ul>
+<li><strong>Study other popular charts</strong>: Look at how other popular charts are structured and try to replicate their patterns and techniques. This can help you understand what works well and what doesn't.</li>
+<li><strong>Use a metronome</strong>: A metronome can help you keep time and stay in sync with the music. You can use the built-in metronome in Syncra Engine by going to <code>View</code> and selecting <code>Show Metronome</code>. This will display a metronome in the timeline that you can use to keep time while charting.</li>
+<li><strong>Practice, practice, practice</strong>: The more you practice charting, the better you will become. Don't be afraid to experiment and try new things. The more you practice, the more comfortable you will become with the tools and techniques used in charting.</li>
+<li><strong>Test FREQUENTLY.</strong>: Testing your chart frequently is important to ensure that it plays well and is fun to play. You can do this by exporting your project and running it in the target engine, or by using the built-in test mode in Syncra Engine. This will allow you to play through your chart and make any necessary adjustments.</li>
+<li><strong>Get feedback</strong>: Share your chart with others and get feedback on it. This can help you identify areas for improvement and get new ideas for your chart.</li>
+</ul>
+<h2 id="exporting-your-project">Exporting Your Project</h2>
+<p>Once you have finished charting your level, it's time to export it. To do this, go to the <code>File</code> menu and select <code>Export Project</code>. This will bring up the Export dialog, where you can choose the target engine and the export settings. You can also choose to export your project as a <code>.syncra</code> file, which is a structured project archive that can be used in other engines.</p>
+<p>Once you have selected the target engine and the export settings, click <code>Export</code> to export your project. This will create a folder/archive with all the necessary files for your project, including the chart file, audio file, and any other files you have added to your project.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Congratulations! You have successfully created your first project in Syncra Engine. You now have a basic understanding of how to use the interface, how to chart a level, and how to export your project.</p>
+<p>If you want to learn more about Syncra Engine and how it works, you can check out the rest of this documentation. There are many more features and tools available in Syncra Engine that can help you create even more complex and interesting levels! Additionally, you can also join our <a href="https://discord.gg/v8zEVwn4QV">Discord Server</a> to get help and support from the community, as well as share your projects and get feedback from other users.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
