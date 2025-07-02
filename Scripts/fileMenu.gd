@@ -6,6 +6,8 @@ var coreutils := SyncraUtils.new()
 @onready var subMenuImport: PopupMenu = $"Import Options"
 @onready var subMenuExport: PopupMenu = $"Export Options"
 
+@onready var chartWizard = $"Project Creator"
+
 func _ready() -> void:
 	# Ensure the PopupMenu node is correctly assigned
 	if mainMenu and subMenuExport and subMenuImport:
@@ -32,6 +34,9 @@ func _ready() -> void:
 		_setup_shortcuts()
 		
 func _on_id_pressed(id: int):
+	if id == 0:
+		chartWizard.popup_centered()
+		
 	if id == 10:
 		get_tree().quit()
 		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bd3k81ss1q8k7"]
+[gd_scene load_steps=16 format=3 uid="uid://bd3k81ss1q8k7"]
 
 [ext_resource type="Theme" uid="uid://b1bjtvfk3rb05" path="res://Assets/Themes/Dark_Theme.tres" id="1_uubjt"]
 [ext_resource type="Texture2D" uid="uid://h44wwew1oj52" path="res://Assets/Images/Syncra.png" id="2_5yleq"]
@@ -6,12 +6,7 @@
 [ext_resource type="Script" uid="uid://c5cvppvk6fuc7" path="res://Scripts/fileMenu.gd" id="3_ylpcl"]
 [ext_resource type="Script" uid="uid://cjv3uljan15xg" path="res://Scripts/helpMenu.gd" id="4_cx167"]
 [ext_resource type="Script" uid="uid://d3k1s847b6g5l" path="res://Scripts/about_window.gd" id="5_dolsu"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ykrdu"]
-bg_color = Color(0.05490196, 0.10980392, 0.16078432, 1)
-border_width_top = 3
-border_width_right = 3
-corner_radius_top_right = 10
+[ext_resource type="PackedScene" uid="uid://bdvu7cuim2u5u" path="res://Objects/project_creator.tscn" id="7_3xrxe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yleq"]
 bg_color = Color(0.053053327, 0.10882502, 0.16178209, 1)
@@ -19,6 +14,12 @@ border_width_bottom = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s62qr"]
 bg_color = Color(0.09803922, 0.1764706, 0.2509804, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ykrdu"]
+bg_color = Color(0.05490196, 0.10980392, 0.16078432, 1)
+border_width_top = 3
+border_width_right = 3
+corner_radius_top_right = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xrxe"]
 bg_color = Color(0.05490196, 0.10980392, 0.16078432, 1)
@@ -63,6 +64,30 @@ offset_right = 1280.0
 offset_bottom = 720.0
 theme = ExtResource("1_uubjt")
 
+[node name="Menu Under" type="Panel" parent="Interface"]
+clip_contents = true
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5yleq")
+
+[node name="Menu Content Clip" type="Panel" parent="Interface"]
+clip_contents = true
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 29.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s62qr")
+
+[node name="TextureRect" type="TextureRect" parent="Interface/Menu Content Clip"]
+modulate = Color(0.4862745, 0.4862745, 0.4862745, 1)
+layout_mode = 0
+offset_left = -16.0
+offset_top = -56.0
+offset_right = 127.0
+offset_bottom = 87.0
+texture = ExtResource("2_5yleq")
+expand_mode = 1
+
 [node name="File Browser" type="Panel" parent="Interface"]
 layout_mode = 1
 offset_top = 32.0
@@ -93,30 +118,6 @@ offset_top = 27.0
 offset_right = 183.0
 offset_bottom = 33.0
 grow_horizontal = 2
-
-[node name="Menu Under" type="Panel" parent="Interface"]
-clip_contents = true
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 32.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_5yleq")
-
-[node name="Menu Content Clip" type="Panel" parent="Interface"]
-clip_contents = true
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 29.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_s62qr")
-
-[node name="TextureRect" type="TextureRect" parent="Interface/Menu Content Clip"]
-modulate = Color(0.4862745, 0.4862745, 0.4862745, 1)
-layout_mode = 0
-offset_left = -16.0
-offset_top = -56.0
-offset_right = 127.0
-offset_bottom = 87.0
-texture = ExtResource("2_5yleq")
-expand_mode = 1
 
 [node name="Spyglass" type="Panel" parent="Interface"]
 layout_mode = 1
@@ -165,18 +166,18 @@ vertical_scroll_mode = 2
 [node name="Properties" type="VBoxContainer" parent="Interface/Spyglass/ScrollContainer"]
 layout_mode = 2
 
-[node name="Layers" type="Panel" parent="Interface/Spyglass"]
+[node name="Layers" type="Panel" parent="Interface"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -384.0
-offset_top = 344.0
-offset_bottom = 687.9993
+offset_top = 376.0
+offset_bottom = 719.9993
 grow_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_j2wkk")
 
-[node name="Label" type="Label" parent="Interface/Spyglass/Layers"]
+[node name="Label" type="Label" parent="Interface/Layers"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -189,7 +190,7 @@ grow_horizontal = 2
 text = "Layers"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="Interface/Spyglass/Layers"]
+[node name="HSeparator" type="HSeparator" parent="Interface/Layers"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -200,7 +201,7 @@ offset_right = 186.0
 offset_bottom = 33.0
 grow_horizontal = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Interface/Spyglass/Layers"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Interface/Layers"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 50.0
@@ -209,10 +210,10 @@ offset_bottom = 328.0
 horizontal_scroll_mode = 2
 vertical_scroll_mode = 2
 
-[node name="Properties" type="VBoxContainer" parent="Interface/Spyglass/Layers/ScrollContainer"]
+[node name="Properties" type="VBoxContainer" parent="Interface/Layers/ScrollContainer"]
 layout_mode = 2
 
-[node name="Console" type="Panel" parent="Interface"]
+[node name="Log" type="Panel" parent="Interface"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -227,7 +228,7 @@ grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0co75")
 script = ExtResource("3_ykrdu")
 
-[node name="Label" type="Button" parent="Interface/Console"]
+[node name="Label" type="Button" parent="Interface/Log"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -240,7 +241,7 @@ grow_horizontal = 2
 text = "Console"
 flat = true
 
-[node name="HSeparator" type="HSeparator" parent="Interface/Console"]
+[node name="HSeparator" type="HSeparator" parent="Interface/Log"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -251,7 +252,7 @@ offset_right = 248.0
 offset_bottom = 32.0
 grow_horizontal = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Interface/Console"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Interface/Log"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 40.0
@@ -310,6 +311,9 @@ item_2/disabled = true
 item_3/text = ".chart (Generic Chart)"
 item_3/id = 3
 item_3/disabled = true
+
+[node name="Project Creator" parent="Interface/Menu/File" instance=ExtResource("7_3xrxe")]
+visible = false
 
 [node name="Edit" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
@@ -688,4 +692,4 @@ text = "Editing 'N/A' | Difficulty: 'N/A'"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[connection signal="pressed" from="Interface/Console/Label" to="Interface/Console" method="_on_title_pressed"]
+[connection signal="pressed" from="Interface/Log/Label" to="Interface/Log" method="_on_title_pressed"]

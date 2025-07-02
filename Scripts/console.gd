@@ -7,7 +7,7 @@ var collapsed: bool = false
 
 enum LogType { Info, Warn, Error }
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	match collapsed:
 		true:
 			position.y = 695
@@ -15,7 +15,6 @@ func _process(delta: float) -> void:
 			position.y = 600
 
 func _ready() -> void:
-	console_text.bbcode_enabled = true
 	log_string("Console Initialized", LogType.Info)
 	log_string("You are currently using a Development Preview of Syncra Engine, which is not optimized for production use. Things WILL break, problems WILL arise.", LogType.Warn)
 
