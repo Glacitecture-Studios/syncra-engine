@@ -1,0 +1,229 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdvu7cuim2u5u"]
+
+[ext_resource type="Script" uid="uid://dhn6wmi31vcmj" path="res://Scripts/NCWiz/NCWizard.gd" id="1_0yxhl"]
+[ext_resource type="Script" uid="uid://b41k4jocbqgw2" path="res://Scripts/file_picker.gd" id="2_u5isk"]
+
+[node name="Project Creator" type="Window"]
+oversampling_override = 1.0
+title = "Project Creator"
+initial_position = 1
+size = Vector2i(400, 500)
+script = ExtResource("1_0yxhl")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(380, 400)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Basic Metadata"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Project Name" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "The name of the level. Support all ASCII Characters."
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Project Name"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Project Name"
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="ScrollContainer/VBoxContainer/Project Name"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -247.0
+offset_top = 4.0
+offset_right = -10.05127
+offset_bottom = 35.0
+grow_horizontal = 0
+
+[node name="Song Artists" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "The person(s) who created the song used in the level. Can have multiple entries, separated by commas."
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Song Artists"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Song Artist(s)"
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="ScrollContainer/VBoxContainer/Song Artists"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -247.0
+offset_top = 4.0
+offset_right = -10.05127
+offset_bottom = 35.0
+grow_horizontal = 0
+
+[node name="Charters" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "The person who charted the level(s). Can have multiple entries separated by commas."
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Charters"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Charters"
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="ScrollContainer/VBoxContainer/Charters"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -247.0
+offset_top = 4.0
+offset_right = -10.05127
+offset_bottom = 35.0
+grow_horizontal = 0
+
+[node name="Audio File Path" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "The person who charted the level(s). Can have multiple entries separated by commas."
+script = ExtResource("2_u5isk")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Audio File Path"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Audio File"
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="ScrollContainer/VBoxContainer/Audio File Path"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -247.0
+offset_top = 4.0
+offset_right = -54.0
+offset_bottom = 35.0
+grow_horizontal = 0
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/Audio File Path"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -49.899994
+offset_top = 4.0
+offset_right = -9.899994
+offset_bottom = 35.0
+grow_horizontal = 0
+text = "Pick"
+
+[node name="FileDialog" type="FileDialog" parent="ScrollContainer/VBoxContainer/Audio File Path/Button"]
+oversampling_override = 1.0
+title = "Open a File"
+ok_button_text = "Select"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.ogg")
+use_native_dialog = true
+
+[node name="Project File Path" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "Where the project will be stored on your computer. Ideally, this should be somewhere accessible to the user and not in any system folders."
+script = ExtResource("2_u5isk")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Project File Path"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Project Path"
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="ScrollContainer/VBoxContainer/Project File Path"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -247.0
+offset_top = 4.0
+offset_right = -54.0
+offset_bottom = 35.0
+grow_horizontal = 0
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/Project File Path"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -49.899994
+offset_top = 4.0
+offset_right = -9.899994
+offset_bottom = 35.0
+grow_horizontal = 0
+text = "Pick"
+
+[node name="FileDialog" type="FileDialog" parent="ScrollContainer/VBoxContainer/Project File Path/Button"]
+oversampling_override = 1.0
+title = "Open a Directory"
+ok_button_text = "Select"
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[node name="Audio Settings" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Audio Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -59.0
+offset_top = -51.674988
+offset_right = 59.0
+offset_bottom = -20.674927
+grow_horizontal = 2
+grow_vertical = 0
+text = "Create Project"
