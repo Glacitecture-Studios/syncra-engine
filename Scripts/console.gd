@@ -2,21 +2,19 @@ extends Control
 class_name Console
 
 @onready var console_text = $RichTextLabel
+@onready var clear_button = $Button
 
 var collapsed: bool = false
 
 enum LogType { Info, Warn, Error }
 
-func _process(_delta: float) -> void:
-	match collapsed:
-		true:
-			position.y = 695
-		false:
-			position.y = 600
-
 func _ready() -> void:
+	clear_button.pressed.connect(_on_clear)
 	log_string("Console Initialized", LogType.Info)
 	log_string("You are currently using a Development Preview of Syncra Engine, which is not optimized for production use. Things WILL break, problems WILL arise.", LogType.Warn)
+
+func _on_clear() -> void:
+	console_text.clear()
 
 func log_string(l: String, t: LogType = LogType.Info) -> void:
 	var td: Dictionary = Time.get_time_dict_from_system()
@@ -36,4 +34,9 @@ func log_string(l: String, t: LogType = LogType.Info) -> void:
 			print_rich("[Syncra | Info] " + l)
 
 func _on_title_pressed():
+	if (collapsed):
+		position.y -= 85
+	else:
+		position.y += 85
 	collapsed = not collapsed
+	

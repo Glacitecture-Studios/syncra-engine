@@ -1,0 +1,520 @@
+[gd_scene load_steps=5 format=3 uid="uid://fb67k5ksapg2"]
+
+[ext_resource type="Script" uid="uid://bfyjc6a5e8dkg" path="res://Scripts/preferences.gd" id="1_pn1ny"]
+[ext_resource type="Script" uid="uid://b41k4jocbqgw2" path="res://Scripts/file_picker.gd" id="1_qvhfc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qvhfc"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qikha"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.10196078, 0.10196078, 0.10196078, 0.827451)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Preferences" type="Window"]
+oversampling_override = 1.0
+title = "Preferences"
+initial_position = 2
+size = Vector2i(900, 500)
+script = ExtResource("1_pn1ny")
+
+[node name="SplitContainer" type="SplitContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+theme_override_constants/minimum_grab_thickness = 0
+split_offset = 150
+dragging_enabled = false
+
+[node name="Categories" type="Control" parent="SplitContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="SplitContainer/Categories"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qvhfc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SplitContainer/Categories/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="General" type="Button" parent="SplitContainer/Categories/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "General"
+
+[node name="Input" type="Button" parent="SplitContainer/Categories/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Input"
+
+[node name="Editor" type="Button" parent="SplitContainer/Categories/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Editor"
+
+[node name="Visual" type="Button" parent="SplitContainer/Categories/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Visual"
+
+[node name="Audio" type="Button" parent="SplitContainer/Categories/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Audio"
+
+[node name="Files & Export" type="Button" parent="SplitContainer/Categories/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Files & Export"
+
+[node name="Advanced" type="Button" parent="SplitContainer/Categories/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Advanced"
+
+[node name="Maintenance" type="Button" parent="SplitContainer/Categories/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Maintenance"
+
+[node name="Options" type="Control" parent="SplitContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="SplitContainer/Options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qikha")
+
+[node name="General" type="ScrollContainer" parent="SplitContainer/Options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SplitContainer/Options/General"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Interface" type="Label" parent="SplitContainer/Options/General/VBoxContainer"]
+layout_mode = 2
+text = "Interface"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="SplitContainer/Options/General/VBoxContainer"]
+layout_mode = 2
+
+[node name="Editor Theme" type="Control" parent="SplitContainer/Options/General/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "The theme of the Editor. NOTE: Inherit System may not work correctly on all platforms, especially Linux."
+
+[node name="Label" type="Label" parent="SplitContainer/Options/General/VBoxContainer/Editor Theme"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 35.0
+text = "Editor Theme"
+vertical_alignment = 1
+
+[node name="Input" type="OptionButton" parent="SplitContainer/Options/General/VBoxContainer/Editor Theme"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 4.0
+offset_right = -10.05127
+offset_bottom = 35.0
+grow_horizontal = 0
+selected = 1
+item_count = 3
+popup/item_0/text = "Light"
+popup/item_0/id = 0
+popup/item_1/text = "Dark"
+popup/item_1/id = 1
+popup/item_2/text = "Inherit System"
+popup/item_2/id = 2
+
+[node name="Font Size" type="Control" parent="SplitContainer/Options/General/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "The size of text in the editor. Unless you have a hard time reading some text, we recommend you leave this as the default."
+
+[node name="Label" type="Label" parent="SplitContainer/Options/General/VBoxContainer/Font Size"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 35.0
+text = "Font Size"
+vertical_alignment = 1
+
+[node name="Input" type="SpinBox" parent="SplitContainer/Options/General/VBoxContainer/Font Size"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 4.0
+offset_right = -10.05127
+offset_bottom = 35.0
+grow_horizontal = 0
+min_value = 11.0
+max_value = 26.0
+value = 16.0
+rounded = true
+
+[node name="Language" type="Control" parent="SplitContainer/Options/General/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "The Language to use in the Editor. 
+NOTE: Localization for Syncra Engine is currently VERY lackluster. A lot of languages are either completely missing, incomplete or have incorrect translations."
+
+[node name="Label" type="Label" parent="SplitContainer/Options/General/VBoxContainer/Language"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.49019608)
+text = "Language"
+vertical_alignment = 1
+
+[node name="Input" type="OptionButton" parent="SplitContainer/Options/General/VBoxContainer/Language"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 4.0
+offset_right = -10.05127
+offset_bottom = 36.0
+grow_horizontal = 0
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "简体中文"
+popup/item_1/id = 1
+popup/item_2/text = "日本語"
+popup/item_2/id = 2
+popup/item_3/text = "한국어"
+popup/item_3/id = 3
+popup/item_4/text = "Español"
+popup/item_4/id = 4
+
+[node name="Startup" type="Label" parent="SplitContainer/Options/General/VBoxContainer"]
+layout_mode = 2
+text = "Startup"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="SplitContainer/Options/General/VBoxContainer"]
+layout_mode = 2
+
+[node name="Load Last Project" type="Control" parent="SplitContainer/Options/General/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "If enabled, Syncra will cache the last project you had open and open it automatically when it is started next."
+
+[node name="Label" type="Label" parent="SplitContainer/Options/General/VBoxContainer/Load Last Project"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 35.0
+text = "Load Last Project on Launch"
+vertical_alignment = 1
+
+[node name="Input" type="CheckButton" parent="SplitContainer/Options/General/VBoxContainer/Load Last Project"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 4.0
+offset_right = -316.0
+offset_bottom = 35.0
+grow_horizontal = 0
+
+[node name="Default Project Path" type="Control" parent="SplitContainer/Options/General/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "Here, you can define a default project path, which will be used if another path is not specified for new projects."
+script = ExtResource("1_qvhfc")
+
+[node name="Label" type="Label" parent="SplitContainer/Options/General/VBoxContainer/Default Project Path"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Default Project Path"
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="SplitContainer/Options/General/VBoxContainer/Default Project Path"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -352.0
+offset_top = 4.0
+offset_right = -54.0
+offset_bottom = 35.0
+grow_horizontal = 0
+
+[node name="Button" type="Button" parent="SplitContainer/Options/General/VBoxContainer/Default Project Path"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -49.899994
+offset_top = 4.0
+offset_right = -9.899994
+offset_bottom = 35.0
+grow_horizontal = 0
+text = "Pick"
+
+[node name="FileDialog" type="FileDialog" parent="SplitContainer/Options/General/VBoxContainer/Default Project Path/Button"]
+oversampling_override = 1.0
+title = "Open a Directory"
+ok_button_text = "Select"
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[node name="Check for Updates" type="Control" parent="SplitContainer/Options/General/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "Syncra will check GitHub for new versions if this is enabled and let you know with a toast."
+
+[node name="Label" type="Label" parent="SplitContainer/Options/General/VBoxContainer/Check for Updates"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 35.0
+text = "Check for Updates"
+vertical_alignment = 1
+
+[node name="Input" type="CheckButton" parent="SplitContainer/Options/General/VBoxContainer/Check for Updates"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 8.0
+offset_right = -316.0
+offset_bottom = 39.0
+grow_horizontal = 0
+
+[node name="Logging" type="Label" parent="SplitContainer/Options/General/VBoxContainer"]
+layout_mode = 2
+text = "Logging"
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="SplitContainer/Options/General/VBoxContainer"]
+layout_mode = 2
+
+[node name="Log Level" type="Control" parent="SplitContainer/Options/General/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "The level of which console messages should be logged. Note: This setting currently does nothing."
+
+[node name="Label" type="Label" parent="SplitContainer/Options/General/VBoxContainer/Log Level"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 35.0
+text = "Log Level"
+vertical_alignment = 1
+
+[node name="Input" type="OptionButton" parent="SplitContainer/Options/General/VBoxContainer/Log Level"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 4.0
+offset_right = -10.05127
+offset_bottom = 35.0
+grow_horizontal = 0
+selected = 1
+item_count = 4
+popup/item_0/text = "Info"
+popup/item_0/id = 0
+popup/item_1/text = "Warning"
+popup/item_1/id = 1
+popup/item_2/text = "Error"
+popup/item_2/id = 2
+popup/item_3/text = "Verbose"
+popup/item_3/id = 3
+
+[node name="Auto-Flush Logs" type="Control" parent="SplitContainer/Options/General/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "When the game closes, the console will automatically be flushed to a .log file."
+
+[node name="Label" type="Label" parent="SplitContainer/Options/General/VBoxContainer/Auto-Flush Logs"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 35.0
+text = "Auto-Flush Logs to File"
+vertical_alignment = 1
+
+[node name="Input" type="CheckButton" parent="SplitContainer/Options/General/VBoxContainer/Auto-Flush Logs"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 4.0
+offset_right = -316.0
+offset_bottom = 35.0
+grow_horizontal = 0
+
+[node name="Log Directory" type="Control" parent="SplitContainer/Options/General/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "By default, this is usr://, but if you want to send log files elsewhere, please specify where here."
+script = ExtResource("1_qvhfc")
+
+[node name="Label" type="Label" parent="SplitContainer/Options/General/VBoxContainer/Log Directory"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Log Directory"
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="SplitContainer/Options/General/VBoxContainer/Log Directory"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -352.0
+offset_top = 4.0
+offset_right = -54.0
+offset_bottom = 35.0
+grow_horizontal = 0
+
+[node name="Button" type="Button" parent="SplitContainer/Options/General/VBoxContainer/Log Directory"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -49.899994
+offset_top = 4.0
+offset_right = -9.899994
+offset_bottom = 35.0
+grow_horizontal = 0
+text = "Pick"
+
+[node name="FileDialog" type="FileDialog" parent="SplitContainer/Options/General/VBoxContainer/Log Directory/Button"]
+oversampling_override = 1.0
+title = "Open a Directory"
+ok_button_text = "Select"
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[node name="Input" type="ScrollContainer" parent="SplitContainer/Options"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SplitContainer/Options/Input"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Interface" type="Label" parent="SplitContainer/Options/Input/VBoxContainer"]
+layout_mode = 2
+text = "Editor Controls"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="SplitContainer/Options/Input/VBoxContainer"]
+layout_mode = 2
+
+[node name="FoldableContainer" type="FoldableContainer" parent="SplitContainer/Options/Input/VBoxContainer"]
+layout_mode = 2
+folded = true
+title = "Keybinds (Currently Unchangable)"
+
+[node name="Editor Theme" type="Control" parent="SplitContainer/Options/Input/VBoxContainer/FoldableContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "The name of the level. Support all ASCII Characters."
+
+[node name="Label" type="Label" parent="SplitContainer/Options/Input/VBoxContainer/FoldableContainer/Editor Theme"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 35.0
+text = "New Project"
+vertical_alignment = 1
+
+[node name="Input" type="Button" parent="SplitContainer/Options/Input/VBoxContainer/FoldableContainer/Editor Theme"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 4.0
+offset_right = -10.05127
+offset_bottom = 35.0
+grow_horizontal = 0
+text = "Ctrl+N"
