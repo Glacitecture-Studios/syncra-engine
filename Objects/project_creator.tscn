@@ -7,7 +7,7 @@
 oversampling_override = 1.0
 title = "Project Creator"
 initial_position = 2
-size = Vector2i(400, 500)
+size = Vector2i(600, 500)
 script = ExtResource("1_0yxhl")
 
 [node name="Scroller" type="ScrollContainer" parent="."]
@@ -21,7 +21,7 @@ offset_right = -10.0
 offset_bottom = -90.0
 grow_horizontal = 2
 grow_vertical = 2
-scroll_vertical = 185
+scroll_vertical = 100
 vertical_scroll_mode = 2
 
 [node name="Spacer" type="VBoxContainer" parent="Scroller"]

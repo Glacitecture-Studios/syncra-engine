@@ -1,0 +1,821 @@
+# LANGUAGE translation for Syncra Engine for the following files:
+# res://Objects/preferences.tscn
+# res://Objects/project_creator.tscn
+# res://Assets/Scenes/Menu.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncra Engine\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: Objects/preferences.tscn
+msgid "Preferences"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "General"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Input"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Editor"
+msgstr ""
+
+#: Objects/preferences.tscn Assets/Scenes/Menu.tscn
+msgid "Visual"
+msgstr ""
+
+#: Objects/preferences.tscn Assets/Scenes/Menu.tscn
+msgid "Audio"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Files & Export"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Advanced"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Maintenance"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Interface"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid ""
+"The theme of the Editor. NOTE: Inherit System may not work correctly on all "
+"platforms, especially Linux."
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Editor Theme"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Light"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Dark"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Inherit System"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid ""
+"The size of text in the editor. Unless you have a hard time reading some "
+"text, we recommend you leave this as the default."
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Font Size"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid ""
+"The Language to use in the Editor. \n"
+"NOTE: Localization for Syncra Engine is currently VERY lackluster. A lot of "
+"languages are either completely missing, incomplete or have incorrect "
+"translations."
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Language"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "English"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "简体中文"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "日本語"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "한국어"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Español"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Startup"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid ""
+"If enabled, Syncra will cache the last project you had open and open it "
+"automatically when it is started next."
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Load Last Project on Launch"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid ""
+"Here, you can define a default project path, which will be used if another "
+"path is not specified for new projects."
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Default Project Path"
+msgstr ""
+
+#: Objects/preferences.tscn Objects/project_creator.tscn
+msgid "Pick"
+msgstr ""
+
+#: Objects/preferences.tscn Objects/project_creator.tscn
+msgid "Open a Directory"
+msgstr ""
+
+#: Objects/preferences.tscn Objects/project_creator.tscn
+msgid "Select"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid ""
+"Syncra will check GitHub for new versions if this is enabled and let you "
+"know with a toast."
+msgstr ""
+
+#: Objects/preferences.tscn Assets/Scenes/Menu.tscn
+msgid "Check for Updates"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Logging"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid ""
+"The level of which console messages should be logged. Note: This setting "
+"currently does nothing."
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Log Level"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Info"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Warning"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Error"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Verbose"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid ""
+"When the game closes, the console will automatically be flushed to a .log "
+"file."
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Auto-Flush Logs to File"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid ""
+"By default, this is usr://, but if you want to send log files elsewhere, "
+"please specify where here."
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Log Directory"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Editor Controls"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Keybinds (Currently Unchangable)"
+msgstr ""
+
+#: Objects/preferences.tscn Objects/project_creator.tscn
+msgid "The name of the level. Support all ASCII Characters."
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "New Project"
+msgstr ""
+
+#: Objects/preferences.tscn
+msgid "Ctrl+N"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Project Creator"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid ""
+"Concerns basic info about your project, such as it's name and artist. This "
+"is required to make a project."
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Basic Metadata"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Project Name"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid ""
+"The person(s) who created the song used in the level. Can have multiple "
+"entries, separated by commas."
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Song Artist(s)"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid ""
+"The person who charted the level(s). Can have multiple entries separated by "
+"commas."
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Charters"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid ""
+"The location of the song file to be used in this project. Currently, syncra "
+"engine only supports OGG Vorbis, but you can convert to this using sites "
+"like CloudConvert or using ffmpeg."
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Audio File"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Open a File"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid ""
+"Where the project will be stored on your computer. Ideally, this should be "
+"somewhere accessible to the user and not in any system folders."
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Project Path"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid ""
+"Concerns info about your project's Audio, such as the BPM of your track and "
+"it's time signature. The preview is optional, but if your game has song "
+"previews, it is recommended to fill them out."
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Audio Settings"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid ""
+"The BPM of your Project. This is required to automatically translate the "
+"correct timing to the exported charts."
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "BPM (Beats Per Minute)"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid ""
+"When in seconds the song's preview starts. This is optional, but recommended "
+"if your game supports it."
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Preview Start"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid ""
+"When in seconds the song's preview ends. This is optional, but recommended "
+"if your game supports it."
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Preview End"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid ""
+"How many beats are in a measure. This is the left/top number of the song's "
+"Time Signature. Used to change how the Timeline Grid is displayed."
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Beats Per Measure"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid ""
+"Which beat subdivision a measure's beat belongs to. This is the right/bottom "
+"value of the song's Time Signature, and must be a multiple of 2 to be valid."
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Beat Subdivision"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Visuals (Optional)"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Background Image"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Project Name must not be empty"
+msgstr ""
+
+#: Objects/project_creator.tscn
+msgid "Create Project"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "File Browser"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Spyglass"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Console"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Clear"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "File"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Syncra Project"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid ".osu (osu! Beatmap)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid ".qua (Quaver Chart)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid ".chart (Generic Chart)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid ".syncra (Syncra Archive)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Edit"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Undo (Ctrl+Z)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Redo (Ctrl+Shift+Z)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Cut (Ctrl+X)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Copy (Ctrl+C)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Paste (Ctrl+V)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Duplicate"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Delete (Del)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Select All Notes (Ctrl+A)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Invert Selection"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Snap to Grid"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Align to Beat"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Find/Replace (Ctrl+F)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Insert"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Tap Note"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Hold Note"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Custom Note/Event"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Insert BPM Change"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Insert Time Signature Change"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Insert Marker/Bookmark"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Insert Camera Event"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Insert Visual Effect"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Load Audio File"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Replace Audio File"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Trim Audio"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Set Preview Start/End"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Sync Audio Offset"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Auto Detect BPM"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Audio Latency Calibration"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Toggle Spectrogram View"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Toggle Waveform View"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Chart"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Test Play (with current settings)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Beat Snap Settings"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Difficulty Manager"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Chart Metadata"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Chart Statistics"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Chart Validation"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Load Background Image"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Note Skin Editor"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Visual FX Timeline"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Events"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Add New Custom Event"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Event Timeline Editor"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Event Scripting"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Tools"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Note Pattern Database"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Difficulty Scaling Tool"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Mirror/Flip Chart"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Offset Corrector"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Grid Snapping Presets"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Export Statistics/Report"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Chart Cleaning Utility"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "View"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Toggle Note Lane View"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Toggle Timeline View"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Toggle Event Tracks"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Show Gridlines"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Zoom Presets"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Toggle Theme"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Debug"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Hitbox & Timing Visualization"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Script Console"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Show Warnings/Errors"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Event Debug Panel"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Sync"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Create Repository"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Connect to Remote Project..."
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Sync With Server"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Pull Changes"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Push Changes"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "View Sync Logs"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Resolve Conflicts"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Commit Changes"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Manage Collaborators"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Plugins"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Plugin Manager"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Browse Plugins..."
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Install from File..."
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Reload Plugins"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Toggle Plugins"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Plugin Configs"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Open Plugin Folder"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Developer Mode (for debugging)"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Help"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "User Manual"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Quick Start Tutorial"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "API/Script Reference"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Report a Bug"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Community Hub"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "About Syncra Engine"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "About"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid ""
+"Syncra Engine is a Global Rhythm Game Beatmap Editing Tool (or GRGBET) "
+"designed to be compatible with most common Rhythm Game Beatmap formats. It "
+"also has plugins for popular Game Engines to allow easy importing of the ."
+"syncra format."
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid ""
+"Syncra Engine © 2025 by Glacitecture Studios is licensed under CC BY-ND 4.0"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Engine Version: 0.2.0\n"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Date: 03/07/25"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Operating System:"
+msgstr ""
+
+#: Assets/Scenes/Menu.tscn
+msgid "Editing 'N/A' | Difficulty: 'N/A'"
+msgstr ""

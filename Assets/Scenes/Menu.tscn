@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bd3k81ss1q8k7"]
+[gd_scene load_steps=19 format=3 uid="uid://bd3k81ss1q8k7"]
 
 [ext_resource type="Theme" uid="uid://b1bjtvfk3rb05" path="res://Assets/Themes/Dark_Theme.tres" id="1_uubjt"]
 [ext_resource type="Texture2D" uid="uid://h44wwew1oj52" path="res://Assets/Images/Syncra.png" id="2_5yleq"]
@@ -8,10 +8,15 @@
 [ext_resource type="Script" uid="uid://d3k1s847b6g5l" path="res://Scripts/about_window.gd" id="5_dolsu"]
 [ext_resource type="PackedScene" uid="uid://bdvu7cuim2u5u" path="res://Objects/project_creator.tscn" id="7_3xrxe"]
 [ext_resource type="PackedScene" uid="uid://fb67k5ksapg2" path="res://Objects/preferences.tscn" id="8_0co75"]
+[ext_resource type="Script" uid="uid://s3im286idvae" path="res://Scripts/auto_version_label.gd" id="9_s62qr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yleq"]
 bg_color = Color(0.053053327, 0.10882502, 0.16178209, 1)
+border_width_left = 3
+border_width_right = 3
 border_width_bottom = 3
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s62qr"]
 bg_color = Color(0.09803922, 0.1764706, 0.2509804, 0)
@@ -264,6 +269,33 @@ offset_bottom = 30.0
 theme_override_font_sizes/font_size = 14
 text = "Clear"
 flat = true
+
+[node name="Timeline" type="Control" parent="Interface"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -296.0
+offset_right = -165.17981
+offset_bottom = -103.49542
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(6.4153795, 2.659677)
+
+[node name="Toolbar" type="Panel" parent="Interface"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 384.0
+offset_top = 31.0
+offset_right = -384.0
+offset_bottom = 62.999977
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5yleq")
 
 [node name="Menu" type="MenuBar" parent="Interface"]
 layout_mode = 1
@@ -657,13 +689,14 @@ autowrap_mode = 2
 offset_top = 378.0
 offset_right = 400.0
 offset_bottom = 403.0
-text = "Editor Version: 0.2.0
-Engine Version: 0.2.0
+text = "Engine Version: 0.2.0
 "
 label_settings = SubResource("LabelSettings_dolsu")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+script = ExtResource("9_s62qr")
+suffix = "Engine Version: "
 
 [node name="Date" type="Label" parent="Interface/Menu/Help/About Window"]
 offset_top = 415.0
@@ -691,8 +724,9 @@ offset_left = 4.0
 offset_top = 3.0
 offset_right = 161.0
 offset_bottom = 26.0
-text = "Syncra Engine v0.2.0"
 vertical_alignment = 1
+script = ExtResource("9_s62qr")
+suffix = "Syncra Engine v"
 
 [node name="Project" type="Label" parent="Interface"]
 layout_mode = 1
