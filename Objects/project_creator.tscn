@@ -6,11 +6,11 @@
 [node name="Project Creator" type="Window"]
 oversampling_override = 1.0
 title = "Project Creator"
-initial_position = 1
+initial_position = 2
 size = Vector2i(400, 500)
 script = ExtResource("1_0yxhl")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="Scroller" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(380, 400)
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,28 +21,31 @@ offset_right = -10.0
 offset_bottom = -90.0
 grow_horizontal = 2
 grow_vertical = 2
+scroll_vertical = 185
 vertical_scroll_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+[node name="Spacer" type="VBoxContainer" parent="Scroller"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Scroller/Spacer"]
 layout_mode = 2
+tooltip_text = "Concerns basic info about your project, such as it's name and artist. This is required to make a project."
+mouse_filter = 1
 text = "Basic Metadata"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="Scroller/Spacer"]
 layout_mode = 2
 
-[node name="Project Name" type="Control" parent="ScrollContainer/VBoxContainer"]
+[node name="Project Name" type="Control" parent="Scroller/Spacer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 tooltip_text = "The name of the level. Support all ASCII Characters."
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Project Name"]
+[node name="Label" type="Label" parent="Scroller/Spacer/Project Name"]
 custom_minimum_size = Vector2(0, 31)
 layout_mode = 0
 offset_top = 4.0
@@ -51,7 +54,7 @@ offset_bottom = 27.0
 text = "Project Name"
 vertical_alignment = 1
 
-[node name="Input" type="LineEdit" parent="ScrollContainer/VBoxContainer/Project Name"]
+[node name="Input" type="LineEdit" parent="Scroller/Spacer/Project Name"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -62,12 +65,12 @@ offset_right = -10.05127
 offset_bottom = 35.0
 grow_horizontal = 0
 
-[node name="Song Artists" type="Control" parent="ScrollContainer/VBoxContainer"]
+[node name="Song Artists" type="Control" parent="Scroller/Spacer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 tooltip_text = "The person(s) who created the song used in the level. Can have multiple entries, separated by commas."
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Song Artists"]
+[node name="Label" type="Label" parent="Scroller/Spacer/Song Artists"]
 custom_minimum_size = Vector2(0, 31)
 layout_mode = 0
 offset_top = 4.0
@@ -76,7 +79,7 @@ offset_bottom = 27.0
 text = "Song Artist(s)"
 vertical_alignment = 1
 
-[node name="Input" type="LineEdit" parent="ScrollContainer/VBoxContainer/Song Artists"]
+[node name="Input" type="LineEdit" parent="Scroller/Spacer/Song Artists"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -87,12 +90,12 @@ offset_right = -10.05127
 offset_bottom = 35.0
 grow_horizontal = 0
 
-[node name="Charters" type="Control" parent="ScrollContainer/VBoxContainer"]
+[node name="Charters" type="Control" parent="Scroller/Spacer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 tooltip_text = "The person who charted the level(s). Can have multiple entries separated by commas."
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Charters"]
+[node name="Label" type="Label" parent="Scroller/Spacer/Charters"]
 custom_minimum_size = Vector2(0, 31)
 layout_mode = 0
 offset_top = 4.0
@@ -101,7 +104,7 @@ offset_bottom = 27.0
 text = "Charters"
 vertical_alignment = 1
 
-[node name="Input" type="LineEdit" parent="ScrollContainer/VBoxContainer/Charters"]
+[node name="Input" type="LineEdit" parent="Scroller/Spacer/Charters"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -112,13 +115,13 @@ offset_right = -10.05127
 offset_bottom = 35.0
 grow_horizontal = 0
 
-[node name="Audio File Path" type="Control" parent="ScrollContainer/VBoxContainer"]
+[node name="Audio File Path" type="Control" parent="Scroller/Spacer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-tooltip_text = "The person who charted the level(s). Can have multiple entries separated by commas."
+tooltip_text = "The location of the song file to be used in this project. Currently, syncra engine only supports OGG Vorbis, but you can convert to this using sites like CloudConvert or using ffmpeg."
 script = ExtResource("2_u5isk")
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Audio File Path"]
+[node name="Label" type="Label" parent="Scroller/Spacer/Audio File Path"]
 custom_minimum_size = Vector2(0, 31)
 layout_mode = 0
 offset_top = 4.0
@@ -127,7 +130,7 @@ offset_bottom = 27.0
 text = "Audio File"
 vertical_alignment = 1
 
-[node name="Input" type="LineEdit" parent="ScrollContainer/VBoxContainer/Audio File Path"]
+[node name="Input" type="LineEdit" parent="Scroller/Spacer/Audio File Path"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -138,7 +141,7 @@ offset_right = -54.0
 offset_bottom = 35.0
 grow_horizontal = 0
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/Audio File Path"]
+[node name="Button" type="Button" parent="Scroller/Spacer/Audio File Path"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -150,7 +153,7 @@ offset_bottom = 35.0
 grow_horizontal = 0
 text = "Pick"
 
-[node name="FileDialog" type="FileDialog" parent="ScrollContainer/VBoxContainer/Audio File Path/Button"]
+[node name="FileDialog" type="FileDialog" parent="Scroller/Spacer/Audio File Path/Button"]
 oversampling_override = 1.0
 title = "Open a File"
 ok_button_text = "Select"
@@ -159,13 +162,13 @@ access = 2
 filters = PackedStringArray("*.ogg")
 use_native_dialog = true
 
-[node name="Project File Path" type="Control" parent="ScrollContainer/VBoxContainer"]
+[node name="Project File Path" type="Control" parent="Scroller/Spacer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 tooltip_text = "Where the project will be stored on your computer. Ideally, this should be somewhere accessible to the user and not in any system folders."
 script = ExtResource("2_u5isk")
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Project File Path"]
+[node name="Label" type="Label" parent="Scroller/Spacer/Project File Path"]
 custom_minimum_size = Vector2(0, 31)
 layout_mode = 0
 offset_top = 4.0
@@ -174,7 +177,7 @@ offset_bottom = 27.0
 text = "Project Path"
 vertical_alignment = 1
 
-[node name="Input" type="LineEdit" parent="ScrollContainer/VBoxContainer/Project File Path"]
+[node name="Input" type="LineEdit" parent="Scroller/Spacer/Project File Path"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -185,7 +188,7 @@ offset_right = -54.0
 offset_bottom = 35.0
 grow_horizontal = 0
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/Project File Path"]
+[node name="Button" type="Button" parent="Scroller/Spacer/Project File Path"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -197,7 +200,7 @@ offset_bottom = 35.0
 grow_horizontal = 0
 text = "Pick"
 
-[node name="FileDialog" type="FileDialog" parent="ScrollContainer/VBoxContainer/Project File Path/Button"]
+[node name="FileDialog" type="FileDialog" parent="Scroller/Spacer/Project File Path/Button"]
 oversampling_override = 1.0
 title = "Open a Directory"
 ok_button_text = "Select"
@@ -205,14 +208,233 @@ file_mode = 2
 access = 2
 use_native_dialog = true
 
-[node name="Audio Settings" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="Audio Settings" type="Label" parent="Scroller/Spacer"]
 layout_mode = 2
+tooltip_text = "Concerns info about your project's Audio, such as the BPM of your track and it's time signature. The preview is optional, but if your game has song previews, it is recommended to fill them out."
+mouse_filter = 1
 text = "Audio Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="Scroller/Spacer"]
 layout_mode = 2
+
+[node name="BPM" type="Control" parent="Scroller/Spacer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "The BPM of your Project. This is required to automatically translate the correct timing to the exported charts."
+
+[node name="Label" type="Label" parent="Scroller/Spacer/BPM"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "BPM (Beats Per Minute)"
+vertical_alignment = 1
+
+[node name="Input" type="SpinBox" parent="Scroller/Spacer/BPM"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -183.0
+offset_top = 4.0
+offset_right = -10.0
+offset_bottom = 35.0
+grow_horizontal = 0
+min_value = 10.0
+max_value = 240.0
+value = 120.0
+rounded = true
+
+[node name="Preview Start" type="Control" parent="Scroller/Spacer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "When in seconds the song's preview starts. This is optional, but recommended if your game supports it."
+
+[node name="Label" type="Label" parent="Scroller/Spacer/Preview Start"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Preview Start"
+vertical_alignment = 1
+
+[node name="Input" type="SpinBox" parent="Scroller/Spacer/Preview Start"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -246.0
+offset_top = 4.0
+offset_right = -10.0
+offset_bottom = 35.0
+grow_horizontal = 0
+max_value = 3600.0
+rounded = true
+suffix = "s"
+
+[node name="Preview End" type="Control" parent="Scroller/Spacer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "When in seconds the song's preview ends. This is optional, but recommended if your game supports it."
+
+[node name="Label" type="Label" parent="Scroller/Spacer/Preview End"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Preview End"
+vertical_alignment = 1
+
+[node name="Input" type="SpinBox" parent="Scroller/Spacer/Preview End"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -246.0
+offset_top = 4.0
+offset_right = -10.0
+offset_bottom = 35.0
+grow_horizontal = 0
+max_value = 3600.0
+rounded = true
+suffix = "s"
+
+[node name="Beats Per Measure" type="Control" parent="Scroller/Spacer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "How many beats are in a measure. This is the left/top number of the song's Time Signature. Used to change how the Timeline Grid is displayed."
+
+[node name="Label" type="Label" parent="Scroller/Spacer/Beats Per Measure"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Beats Per Measure"
+vertical_alignment = 1
+
+[node name="Input" type="SpinBox" parent="Scroller/Spacer/Beats Per Measure"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -218.0
+offset_top = 4.0
+offset_right = -10.0
+offset_bottom = 35.0
+grow_horizontal = 0
+min_value = 1.0
+max_value = 64.0
+value = 1.0
+rounded = true
+
+[node name="Beat Subdivision" type="Control" parent="Scroller/Spacer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "Which beat subdivision a measure's beat belongs to. This is the right/bottom value of the song's Time Signature, and must be a multiple of 2 to be valid."
+
+[node name="Label" type="Label" parent="Scroller/Spacer/Beat Subdivision"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Beat Subdivision"
+vertical_alignment = 1
+
+[node name="Input" type="SpinBox" parent="Scroller/Spacer/Beat Subdivision"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -218.0
+offset_top = 4.0
+offset_right = -10.0
+offset_bottom = 35.0
+grow_horizontal = 0
+min_value = 1.0
+max_value = 64.0
+value = 1.0
+rounded = true
+
+[node name="Visuals" type="Label" parent="Scroller/Spacer"]
+layout_mode = 2
+text = "Visuals (Optional)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="Scroller/Spacer"]
+layout_mode = 2
+
+[node name="Background File Path" type="Control" parent="Scroller/Spacer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+tooltip_text = "Where the project will be stored on your computer. Ideally, this should be somewhere accessible to the user and not in any system folders."
+script = ExtResource("2_u5isk")
+
+[node name="Label" type="Label" parent="Scroller/Spacer/Background File Path"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 372.0
+offset_bottom = 27.0
+text = "Background Image"
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="Scroller/Spacer/Background File Path"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -220.0
+offset_top = 4.0
+offset_right = -54.0
+offset_bottom = 35.0
+grow_horizontal = 0
+
+[node name="Button" type="Button" parent="Scroller/Spacer/Background File Path"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -49.899994
+offset_top = 4.0
+offset_right = -9.899994
+offset_bottom = 35.0
+grow_horizontal = 0
+text = "Pick"
+
+[node name="FileDialog" type="FileDialog" parent="Scroller/Spacer/Background File Path/Button"]
+oversampling_override = 1.0
+title = "Open a File"
+ok_button_text = "Select"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png", "*.jpg")
+use_native_dialog = true
+
+[node name="Error Label" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.5
+offset_top = -80.0
+offset_right = 100.5
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.49019608, 0.49019608, 1)
+theme_override_font_sizes/font_size = 12
+text = "Project Name must not be empty"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 7

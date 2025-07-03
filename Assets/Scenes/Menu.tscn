@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bd3k81ss1q8k7"]
+[gd_scene load_steps=18 format=3 uid="uid://bd3k81ss1q8k7"]
 
 [ext_resource type="Theme" uid="uid://b1bjtvfk3rb05" path="res://Assets/Themes/Dark_Theme.tres" id="1_uubjt"]
 [ext_resource type="Texture2D" uid="uid://h44wwew1oj52" path="res://Assets/Images/Syncra.png" id="2_5yleq"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cjv3uljan15xg" path="res://Scripts/helpMenu.gd" id="4_cx167"]
 [ext_resource type="Script" uid="uid://d3k1s847b6g5l" path="res://Scripts/about_window.gd" id="5_dolsu"]
 [ext_resource type="PackedScene" uid="uid://bdvu7cuim2u5u" path="res://Objects/project_creator.tscn" id="7_3xrxe"]
+[ext_resource type="PackedScene" uid="uid://fb67k5ksapg2" path="res://Objects/preferences.tscn" id="8_0co75"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yleq"]
 bg_color = Color(0.053053327, 0.10882502, 0.16178209, 1)
@@ -25,15 +26,31 @@ corner_radius_top_right = 10
 bg_color = Color(0.05490196, 0.10980392, 0.16078432, 1)
 border_width_left = 3
 border_width_top = 3
-border_width_bottom = 3
 corner_radius_top_left = 10
-corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3xrxe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2wkk"]
-bg_color = Color(0.05490196, 0.10980392, 0.16078432, 1)
-border_width_left = 3
-border_width_top = 3
-corner_radius_top_left = 10
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.75)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0co75"]
 bg_color = Color(0.05490196, 0.10980392, 0.16078432, 1)
@@ -59,16 +76,21 @@ grow_vertical = 2
 metadata/_edit_lock_ = true
 
 [node name="Interface" type="Panel" parent="."]
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_uubjt")
 
 [node name="Menu Under" type="Panel" parent="Interface"]
 clip_contents = true
-layout_mode = 0
-offset_right = 1280.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
 offset_bottom = 32.0
+grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5yleq")
 
 [node name="Menu Content Clip" type="Panel" parent="Interface"]
@@ -90,9 +112,11 @@ expand_mode = 1
 
 [node name="File Browser" type="Panel" parent="Interface"]
 layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
 offset_top = 32.0
 offset_right = 384.0
-offset_bottom = 720.0
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ykrdu")
 
 [node name="Label" type="Label" parent="Interface/File Browser"]
@@ -121,13 +145,16 @@ grow_horizontal = 2
 
 [node name="Spyglass" type="Panel" parent="Interface"]
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = -384.0
 offset_top = 32.0
-offset_bottom = 376.0
+offset_right = -0.00024414063
 grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(368, 0)
 theme_override_styles/panel = SubResource("StyleBoxFlat_3xrxe")
 
 [node name="Label" type="Label" parent="Interface/Spyglass"]
@@ -155,74 +182,33 @@ offset_bottom = 33.0
 grow_horizontal = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Interface/Spyglass"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 50.0
-offset_right = 378.0
-offset_bottom = 328.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 48.0
+offset_right = -7.999756
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3xrxe")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j2wkk")
 horizontal_scroll_mode = 2
 vertical_scroll_mode = 2
 
 [node name="Properties" type="VBoxContainer" parent="Interface/Spyglass/ScrollContainer"]
 layout_mode = 2
 
-[node name="Layers" type="Panel" parent="Interface"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -384.0
-offset_top = 376.0
-offset_bottom = 719.9993
-grow_horizontal = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_j2wkk")
-
-[node name="Label" type="Label" parent="Interface/Layers"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -33.0
-offset_top = 3.0
-offset_right = 33.0
-offset_bottom = 26.0
-grow_horizontal = 2
-text = "Layers"
-horizontal_alignment = 1
-
-[node name="HSeparator" type="HSeparator" parent="Interface/Layers"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -182.0
-offset_top = 27.0
-offset_right = 186.0
-offset_bottom = 33.0
-grow_horizontal = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="Interface/Layers"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 50.0
-offset_right = 378.0
-offset_bottom = 328.0
-horizontal_scroll_mode = 2
-vertical_scroll_mode = 2
-
-[node name="Properties" type="VBoxContainer" parent="Interface/Layers/ScrollContainer"]
-layout_mode = 2
-
 [node name="Log" type="Panel" parent="Interface"]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 12
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -256.0
+offset_left = 384.0
 offset_top = -120.0
-offset_right = 256.0
+offset_right = -384.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0co75")
@@ -243,27 +229,41 @@ flat = true
 
 [node name="HSeparator" type="HSeparator" parent="Interface/Log"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -248.0
-offset_top = 26.0
-offset_right = 248.0
-offset_bottom = 32.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = -8.0
+offset_bottom = 36.0
 grow_horizontal = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Interface/Log"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 8.0
 offset_top = 40.0
-offset_right = 504.0
-offset_bottom = 112.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 12
 theme_override_font_sizes/bold_font_size = 12
 theme_override_font_sizes/bold_italics_font_size = 12
 theme_override_font_sizes/italics_font_size = 12
 theme_override_font_sizes/mono_font_size = 12
 bbcode_enabled = true
+
+[node name="Button" type="Button" parent="Interface/Log"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 2.0
+offset_right = 52.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 14
+text = "Clear"
+flat = true
 
 [node name="Menu" type="MenuBar" parent="Interface"]
 layout_mode = 1
@@ -279,6 +279,7 @@ prefer_global_menu = false
 
 [node name="File" type="PopupMenu" parent="Interface/Menu"]
 oversampling_override = 1.0
+title = "File"
 script = ExtResource("3_ylpcl")
 
 [node name="Import Options" type="PopupMenu" parent="Interface/Menu/File"]
@@ -315,9 +316,13 @@ item_3/disabled = true
 [node name="Project Creator" parent="Interface/Menu/File" instance=ExtResource("7_3xrxe")]
 visible = false
 
+[node name="Preferences" parent="Interface/Menu/File" instance=ExtResource("8_0co75")]
+visible = false
+
 [node name="Edit" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "Edit"
 item_count = 13
 item_0/text = "Undo (Ctrl+Z)"
 item_0/id = 0
@@ -352,6 +357,7 @@ item_12/id = 11
 [node name="Insert" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "Insert"
 item_count = 9
 item_0/text = "Tap Note"
 item_0/id = 0
@@ -380,6 +386,7 @@ item_8/disabled = true
 [node name="Audio" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "Audio"
 item_count = 10
 item_0/text = "Load Audio File"
 item_0/id = 0
@@ -409,6 +416,7 @@ item_9/disabled = true
 [node name="Chart" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "Chart"
 item_count = 7
 item_0/text = "Test Play (with current settings)"
 item_0/id = 4
@@ -429,6 +437,7 @@ item_6/id = 6
 [node name="Visual" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "Visual"
 item_count = 3
 item_0/text = "Load Background Image"
 item_0/id = 0
@@ -441,6 +450,7 @@ item_2/disabled = true
 [node name="Events" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "Events"
 item_count = 3
 item_0/text = "Add New Custom Event"
 item_0/id = 0
@@ -452,6 +462,7 @@ item_2/id = 2
 [node name="Tools" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "Tools"
 item_count = 7
 item_0/text = "Note Pattern Database"
 item_0/id = 0
@@ -471,6 +482,7 @@ item_6/id = 6
 [node name="View" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "View"
 item_count = 6
 item_0/text = "Toggle Note Lane View"
 item_0/checkable = 1
@@ -496,6 +508,7 @@ item_5/id = 5
 [node name="Debug" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "Debug"
 item_count = 4
 item_0/text = "Hitbox & Timing Visualization"
 item_0/id = 0
@@ -512,6 +525,7 @@ item_3/id = 3
 [node name="Sync" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "Sync"
 item_count = 11
 item_0/text = "Create Repository"
 item_0/id = 0
@@ -549,6 +563,7 @@ item_10/disabled = true
 [node name="Plugins" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "Plugins"
 item_count = 9
 item_0/text = "Plugin Manager"
 item_0/id = 0
@@ -574,6 +589,7 @@ item_8/id = 8
 [node name="Help" type="PopupMenu" parent="Interface/Menu"]
 auto_translate_mode = 1
 oversampling_override = 1.0
+title = "Help"
 item_count = 8
 item_0/text = "User Manual"
 item_0/id = 0
@@ -624,7 +640,7 @@ offset_left = 8.0
 offset_top = 210.0
 offset_right = 392.0
 offset_bottom = 402.0
-text = "Syncra Engine is a Global Rhythm Game Beatmap Editing Tool (or GRGBET :D) designed to be compatible with most common Rhythm Game Beatmap formats. It also has plugins for popular Game Engines to allow easy importing of the .syncra format."
+text = "Syncra Engine is a Global Rhythm Game Beatmap Editing Tool (or GRGBET) designed to be compatible with most common Rhythm Game Beatmap formats. It also has plugins for popular Game Engines to allow easy importing of the .syncra format."
 autowrap_mode = 2
 
 [node name="Attribution" type="Label" parent="Interface/Menu/Help/About Window"]
@@ -641,8 +657,8 @@ autowrap_mode = 2
 offset_top = 378.0
 offset_right = 400.0
 offset_bottom = 403.0
-text = "Editor Version: 0.0.1
-Engine Version: 0.0.1
+text = "Editor Version: 0.2.0
+Engine Version: 0.2.0
 "
 label_settings = SubResource("LabelSettings_dolsu")
 horizontal_alignment = 1
@@ -653,7 +669,7 @@ autowrap_mode = 2
 offset_top = 415.0
 offset_right = 400.0
 offset_bottom = 439.0
-text = "Date: 23/05/25"
+text = "Date: 03/07/25"
 label_settings = SubResource("LabelSettings_dolsu")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -663,7 +679,7 @@ autowrap_mode = 2
 offset_top = 434.0
 offset_right = 400.0
 offset_bottom = 459.0
-text = "Operating System: Zorin OS 17.3 (Ubuntu Jammy 22)"
+text = "Operating System:"
 label_settings = SubResource("LabelSettings_dolsu")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -675,7 +691,7 @@ offset_left = 4.0
 offset_top = 3.0
 offset_right = 161.0
 offset_bottom = 26.0
-text = "Syncra Engine v0.1.0"
+text = "Syncra Engine v0.2.0"
 vertical_alignment = 1
 
 [node name="Project" type="Label" parent="Interface"]
